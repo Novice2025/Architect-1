@@ -1,0 +1,2368 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Inglês para Mestrado - Daby</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f7f6;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #3498db;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        h3 {
+            font-size: 1.4em;
+            color: #2980b9;
+        }
+        .intro-text {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ccc;
+            flex-wrap: wrap; /* Permite que as abas quebrem a linha em telas menores */
+        }
+        .tab-button {
+            background-color: #eee;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            margin-right: 5px;
+            margin-bottom: 5px; /* Adicionado para espaçamento em caso de quebra de linha */
+            color: #555;
+        }
+        .tab-button.active {
+            background-color: #3498db;
+            color: white;
+            border-bottom: 2px solid #3498db;
+            font-weight: bold;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+            border-top: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .phrase-block {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .phrase-block strong {
+            color: #e74c3c; /* Cor para o inglês */
+            font-size: 1.1em;
+        }
+        .phrase-block .portuguese {
+            color: #27ae60; /* Cor para o português */
+            font-style: italic;
+            margin-top: 5px;
+        }
+        .explanation {
+            background-color: #f9f9f9;
+            border-left: 3px solid #f39c12;
+            padding: 10px 15px;
+            margin-top: 15px;
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+        .explanation p {
+            margin: 5px 0;
+        }
+        .practice-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed #eee;
+        }
+        .practice-section input[type="text"] {
+            padding: 10px;
+            width: calc(100% - 120px);
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .practice-section button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .practice-section button:hover {
+            background-color: #2980b9;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .feedback.correct {
+            color: #27ae60;
+        }
+        .feedback.incorrect {
+            color: #e74c3c;
+        }
+        .audio-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: #3498db;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .audio-button:hover {
+            color: #2980b9;
+        }
+        .conclusion {
+            background-color: #e8f8f7;
+            border-left: 5px solid #2ecc71;
+            padding: 15px;
+            margin-top: 40px;
+            border-radius: 5px;
+        }
+        /* Estilos para a tabela de termos-chave */
+        .key-terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .term-card {
+            background-color: #f0f8ff;
+            border: 1px solid #a7d9f7;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .term-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .term-card strong {
+            display: block;
+            font-size: 1.2em;
+            color: #0056b3;
+            margin-bottom: 5px;
+        }
+        .term-card span {
+            display: block;
+            font-size: 0.9em;
+            color: #333;
+        }
+        /* Estilos para os exercícios de tradução */
+        .translation-exercise {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .translation-exercise p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .translation-exercise input[type="text"] {
+            padding: 10px;
+            width: calc(100% - 120px);
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .translation-exercise button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .translation-exercise button:hover {
+            background-color: #2980b9;
+        }
+        .translation-feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .translation-feedback.correct {
+            color: #27ae60;
+        }
+        .translation-feedback.incorrect {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Guia de Inglês para Mestrado - Daby</h1>
+
+    <div class="intro-text">
+        <p>Olá, Daby! Que bom que você está aqui. Sei que o mestrado e o prazo do congresso podem parecer desafiadores, mas vamos juntos construir seu inglês para que você possa ler e entender os artigos com mais confiança. Não se preocupe, vamos começar do básico e repetir bastante para que tudo fique claro.</p>
+        <p>Nossa meta é que você se sinta confortável com as frases mais comuns em artigos científicos, especialmente aquelas que você vai encontrar ao falar sobre "Conforto Térmico" e "Aprendizagem".</p>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab(event, 'tab1')">Aba 1: Apresentando o Tópico Principal</button>
+        <button class="tab-button" onclick="openTab(event, 'tab2')">Aba 2: Tópico Específico (Conforto Térmico)</button>
+        <button class="tab-button" onclick="openTab(event, 'tab3')">Aba 3: Contexto e Análise da Literatura</button>
+        <button class="tab-button" onclick="openTab(event, 'tab4')">Aba 4: Justificativa e Fatores Ambientais</button>
+        <button class="tab-button" onclick="openTab(event, 'tab5')">Aba 5: Influência, Desempenho e Regulamentação</button>
+        <button class="tab-button" onclick="openTab(event, 'tab6')">Aba 6: Termos-Chave</button>
+        <button class="tab-button" onclick="openTab(event, 'tab7')">Aba 7: Exercícios de Tradução</button>
+    </div>
+
+    <div id="tab1" class="tab-content active">
+        <h2>Aba 1: Apresentando o Tópico Principal de um Estudo</h2>
+        <p>Nesta primeira aba, vamos focar em como os artigos geralmente começam a falar sobre o que eles estão pesquisando. As frases que vamos aprender são muito comuns para introduzir o tema principal.</p>
+        <p><strong>Instruções para Daby:</strong></p>
+        <ol>
+            <li>Ouça a frase em inglês clicando no ícone de áudio.</li>
+            <li>Leia a tradução e a explicação gramatical.</li>
+            <li>Tente preencher o espaço em branco com a palavra correta, usando o que você aprendeu.</li>
+            <li>Clique em "Verificar Resposta" para ver se acertou!</li>
+        </ol>
+
+        <!-- Frase 1 -->
+        <div class="phrase-block">
+            <h3>Frase 1:</h3>
+            <p><strong>Inglês:</strong> This study investigates. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20study%20investigates.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Este estudo investiga.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This"</strong> significa "este" ou "esta". Em português, usamos para algo que está perto ou que estamos apresentando. Em inglês, é super comum para introduzir o "nosso" estudo, o que estamos lendo agora.</li>
+                    <li><strong>"study"</strong> significa "estudo". É um substantivo, o nome da pesquisa ou trabalho.</li>
+                    <li><strong>"investigates"</strong> significa "investiga". É um verbo (uma ação). A grande sacada aqui é o <strong>"s"</strong> no final! Em inglês, quando o sujeito é "ele", "ela" ou "isso" (como "o estudo" - *it*), no presente simples, adicionamos um "s" (ou "es") ao verbo. Pense que "o estudo" é "ele", por isso "investiga**s**".</li>
+                    <li><strong>Propósito:</strong> Essa é uma das formas mais diretas e comuns de um artigo começar, dizendo logo de cara qual é o foco principal da pesquisa.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "____ study investigates."</p>
+                <input type="text" id="q1_input" onkeyup="checkAnswerOnEnter(event, 'q1_input', 'This', 'q1_feedback')">
+                <button onclick="checkAnswer('q1_input', 'This', 'q1_feedback')">Verificar Resposta</button>
+                <div id="q1_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 2 -->
+        <div class="phrase-block">
+            <h3>Frase 2:</h3>
+            <p><strong>Inglês:</strong> The research focuses on. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20research%20focuses%20on.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A pesquisa foca em.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The"</strong> significa "o", "a", "os", "as". É o nosso artigo definido. Usamos para falar de algo específico, como "a pesquisa" que estamos lendo.</li>
+                    <li><strong>"research"</strong> significa "pesquisa". É outro substantivo muito comum.</li>
+                    <li><strong>"focuses on"</strong> significa "foca em" ou "se concentra em". O verbo "focus" (focar) também ganha "es" no final porque "research" (a pesquisa) é singular (ela/it). A preposição <strong>"on"</strong> é essencial aqui, pois em inglês, "focar" em algo é "focus **on**" algo. Não é "focus in" ou "focus about".</li>
+                    <li><strong>Propósito:</strong> Outra forma muito comum de apresentar o tema central, indicando a área ou o aspecto específico que será explorado.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The research ____ on."</p>
+                <input type="text" id="q2_input" onkeyup="checkAnswerOnEnter(event, 'q2_input', 'focuses', 'q2_feedback')">
+                <button onclick="checkAnswer('q2_input', 'focuses', 'q2_feedback')">Verificar Resposta</button>
+                <div id="q2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 3 -->
+        <div class="phrase-block">
+            <h3>Frase 3:</h3>
+            <p><strong>Inglês:</strong> This paper examines. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20paper%20examines.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Este artigo examina.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This"</strong> (este/esta) você já conhece.</li>
+                    <li><strong>"paper"</strong> significa "artigo" ou "trabalho". Em contextos acadêmicos, "paper" é muito usado para se referir a um artigo científico.</li>
+                    <li><strong>"examines"</strong> significa "examina". É um sinônimo de "investigates" (investiga). Veja que também termina com "s" porque "paper" (o artigo) é singular (ele/it).</li>
+                    <li><strong>Propósito:</strong> Similar às frases anteriores, mas usando "paper" para se referir ao documento em si, e "examines" como um verbo que implica uma análise mais detalhada.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This paper ____."</p>
+                <input type="text" id="q3_input" onkeyup="checkAnswerOnEnter(event, 'q3_input', 'examines', 'q3_feedback')">
+                <button onclick="checkAnswer('q3_input', 'examines', 'q3_feedback')">Verificar Resposta</button>
+                <div id="q3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 4 -->
+        <div class="phrase-block">
+            <h3>Frase 4:</h3>
+            <p><strong>Inglês:</strong> The aim of this study is to. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20aim%20of%20this%20study%20is%20to.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O objetivo deste estudo é.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The aim"</strong> significa "o objetivo" ou "a meta". É um substantivo.</li>
+                    <li><strong>"of"</strong> significa "de" ou "do/da". Conecta "o objetivo" a "este estudo".</li>
+                    <li><strong>"this study"</strong> (este estudo) você já conhece!</li>
+                    <li><strong>"is to"</strong> significa "é para" ou "é". Em inglês, quando queremos expressar o objetivo de algo, essa estrutura "is to [verbo no infinitivo]" é super comum. Por exemplo, "The aim is to *understand*..." (O objetivo é *entender*...).</li>
+                    <li><strong>Propósito:</strong> Essa frase é fundamental para a seção de "Objetivos" ou "Introdução" de qualquer artigo, deixando claro o que a pesquisa pretende alcançar.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The aim of this ____ is to."</p>
+                <input type="text" id="q4_input" onkeyup="checkAnswerOnEnter(event, 'q4_input', 'study', 'q4_feedback')">
+                <button onclick="checkAnswer('q4_input', 'study', 'q4_feedback')">Verificar Resposta</button>
+                <div id="q4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 5 -->
+        <div class="phrase-block">
+            <h3>Frase 5:</h3>
+            <p><strong>Inglês:</strong> This work explores. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20work%20explores.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Este trabalho explora.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This work"</strong> significa "este trabalho". "Work" (trabalho) é outro termo comum para se referir a um estudo ou pesquisa.</li>
+                    <li><strong>"explores"</strong> significa "explora". Mais um verbo com "s" no final, seguindo a regra de "it" (o trabalho). "Explores" sugere uma investigação mais ampla ou aprofundada de um tema.</li>
+                    <li><strong>Propósito:</strong> Uma alternativa para introduzir o tema do estudo, com um tom de descoberta ou análise abrangente.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This work ____."</p>
+                <input type="text" id="q5_input" onkeyup="checkAnswerOnEnter(event, 'q5_input', 'explores', 'q5_feedback')">
+                <button onclick="checkAnswer('q5_input', 'explores', 'q5_feedback')">Verificar Resposta</button>
+                <div id="q5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 6 -->
+        <div class="phrase-block">
+            <h3>Frase 6:</h3>
+            <p><strong>Inglês:</strong> We present data on. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=We%20present%20data%20on.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Nós apresentamos dados sobre.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"We"</strong> significa "nós". É o pronome que os autores usam para se referir a si mesmos.</li>
+                    <li><strong>"present"</strong> significa "apresentamos". Como o sujeito é "we" (nós), o verbo não leva "s" no final.</li>
+                    <li><strong>"data"</strong> significa "dados". Em inglês, "data" é uma palavra muito comum em pesquisa. Em artigos, pode ser usado de ambas as formas (singular ou plural), mas o mais comum é "data are" (plural) ou "data is" (singular) dependendo do contexto. Aqui, "data" está sendo apresentado.</li>
+                    <li><strong>"on"</strong> significa "sobre". A preposição é importante para indicar o assunto dos dados.</li>
+                    <li><strong>Propósito:</strong> Usada para introduzir a apresentação de resultados ou informações coletadas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "We present ____ on."</p>
+                <input type="text" id="q6_input" onkeyup="checkAnswerOnEnter(event, 'q6_input', 'data', 'q6_feedback')">
+                <button onclick="checkAnswer('q6_input', 'data', 'q6_feedback')">Verificar Resposta</button>
+                <div id="q6_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 7 -->
+        <div class="phrase-block">
+            <h3>Frase 7:</h3>
+            <p><strong>Inglês:</strong> The findings suggest that. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20findings%20suggest%20that.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Os achados sugerem que.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The findings"</strong> significa "Os achados" ou "Os resultados". É um substantivo plural.</li>
+                    <li><strong>"suggest that"</strong> significa "sugerem que". Como "findings" é plural (eles/they), o verbo "suggest" (sugerir) não leva "s" no final. "That" (que) introduz a conclusão ou implicação.</li>
+                    <li><strong>Propósito:</strong> Frase crucial para a seção de "Discussão" ou "Conclusão", onde os autores interpretam seus resultados.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The findings ____ that."</p>
+                <input type="text" id="q7_input" onkeyup="checkAnswerOnEnter(event, 'q7_input', 'suggest', 'q7_feedback')">
+                <button onclick="checkAnswer('q7_input', 'suggest', 'q7_feedback')">Verificar Resposta</button>
+                <div id="q7_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 8 -->
+        <div class="phrase-block">
+            <h3>Frase 8:</h3>
+            <p><strong>Inglês:</strong> This indicates a need for. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20indicates%20a%20need%20for.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso indica uma necessidade de.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This indicates"</strong> significa "Isso indica". "Indicates" tem "s" porque "this" (isso/it) é singular.</li>
+                    <li><strong>"a need for"</strong> significa "uma necessidade de". "Need" (necessidade) é um substantivo, e a preposição "for" (para/de) é usada para especificar o que é necessário.</li>
+                    <li><strong>Propósito:</strong> Usada para apontar uma lacuna na pesquisa ou uma área que requer mais atenção.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This indicates a ____ for."</p>
+                <input type="text" id="q8_input" onkeyup="checkAnswerOnEnter(event, 'q8_input', 'need', 'q8_feedback')">
+                <button onclick="checkAnswer('q8_input', 'need', 'q8_feedback')">Verificar Resposta</button>
+                <div id="q8_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 9 -->
+        <div class="phrase-block">
+            <h3>Frase 9:</h3>
+            <p><strong>Inglês:</strong> The results demonstrate that. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20results%20demonstrate%20that.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Os resultados demonstram que.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The results"</strong> significa "Os resultados". É um substantivo plural.</li>
+                    <li><strong>"demonstrate that"</strong> significa "demonstram que". "Demonstrate" (demonstrar) é um sinônimo de "show" (mostrar) ou "suggest" (sugerir), com um tom mais forte de prova. Como "results" é plural, o verbo não leva "s".</li>
+                    <li><strong>Propósito:</strong> Outra frase para apresentar as conclusões ou evidências do estudo.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The results ____ that."</p>
+                <input type="text" id="q9_input" onkeyup="checkAnswerOnEnter(event, 'q9_input', 'demonstrate', 'q9_feedback')">
+                <button onclick="checkAnswer('q9_input', 'demonstrate', 'q9_feedback')">Verificar Resposta</button>
+                <div id="q9_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 10 -->
+        <div class="phrase-block">
+            <h3>Frase 10:</h3>
+            <p><strong>Inglês:</strong> It is important to consider. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20is%20important%20to%20consider.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> É importante considerar.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It is important"</strong> significa "É importante". É uma construção impessoal muito comum.</li>
+                    <li><strong>"to consider"</strong> significa "considerar". O "to" antes do verbo indica o infinitivo.</li>
+                    <li><strong>Propósito:</strong> Usada para introduzir um ponto relevante que deve ser levado em conta na discussão.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It is important to ____."</p>
+                <input type="text" id="q10_input" onkeyup="checkAnswerOnEnter(event, 'q10_input', 'consider', 'q10_feedback')">
+                <button onclick="checkAnswer('q10_input', 'consider', 'q10_feedback')">Verificar Resposta</button>
+                <div id="q10_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 11 -->
+        <div class="phrase-block">
+            <h3>Frase 11:</h3>
+            <p><strong>Inglês:</strong> This research highlights. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20research%20highlights.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Esta pesquisa destaca.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This research"</strong> (esta pesquisa) você já conhece.</li>
+                    <li><strong>"highlights"</strong> significa "destaca" ou "enfatiza". Mais um verbo com "s" para "it" (a pesquisa).</li>
+                    <li><strong>Propósito:</strong> Usada para chamar a atenção para um aspecto importante descoberto ou abordado pelo estudo.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This research ____."</p>
+                <input type="text" id="q11_input" onkeyup="checkAnswerOnEnter(event, 'q11_input', 'highlights', 'q11_feedback')">
+                <button onclick="checkAnswer('q11_input', 'highlights', 'q11_feedback')">Verificar Resposta</button>
+                <div id="q11_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 12 -->
+        <div class="phrase-block">
+            <h3>Frase 12:</h3>
+            <p><strong>Inglês:</strong> The study contributes to. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20study%20contributes%20to.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O estudo contribui para.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The study"</strong> (o estudo) você já conhece.</li>
+                    <li><strong>"contributes to"</strong> significa "contribui para". "Contributes" tem "s" para "it" (o estudo). A preposição <strong>"to"</strong> é essencial para indicar o que recebe a contribuição.</li>
+                    <li><strong>Propósito:</strong> Usada para descrever a relevância do estudo e como ele adiciona valor ao conhecimento existente.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The study ____ to."</p>
+                <input type="text" id="q12_input" onkeyup="checkAnswerOnEnter(event, 'q12_input', 'contributes', 'q12_feedback')">
+                <button onclick="checkAnswer('q12_input', 'contributes', 'q12_feedback')">Verificar Resposta</button>
+                <div id="q12_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 13 -->
+        <div class="phrase-block">
+            <h3>Frase 13:</h3>
+            <p><strong>Inglês:</strong> We observed a correlation. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=We%20observed%20a%20correlation.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Nós observamos uma correlação.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"We observed"</strong> significa "Nós observamos". "Observed" é o passado simples do verbo "observe" (observar).</li>
+                    <li><strong>"a correlation"</strong> significa "uma correlação". "Correlation" (correlação) é um termo estatístico importante.</li>
+                    <li><strong>Propósito:</strong> Usada para apresentar um achado específico, geralmente quantitativo, na seção de "Resultados".</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "We observed a ____."</p>
+                <input type="text" id="q13_input" onkeyup="checkAnswerOnEnter(event, 'q13_input', 'correlation', 'q13_feedback')">
+                <button onclick="checkAnswer('q13_input', 'correlation', 'q13_feedback')">Verificar Resposta</button>
+                <div id="q13_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 14 -->
+        <div class="phrase-block">
+            <h3>Frase 14:</h3>
+            <p><strong>Inglês:</strong> The methodology employed was. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20methodology%20employed%20was.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A metodologia empregada foi.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The methodology"</strong> significa "A metodologia".</li>
+                    <li><strong>"employed"</strong> significa "empregada". É o particípio passado do verbo "employ" (empregar), funcionando como adjetivo.</li>
+                    <li><strong>"was"</strong> significa "foi". É o passado simples do verbo "to be" (ser/estar).</li>
+                    <li><strong>Propósito:</strong> Frase padrão para introduzir a descrição dos métodos de pesquisa.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The methodology ____ was."</p>
+                <input type="text" id="q14_input" onkeyup="checkAnswerOnEnter(event, 'q14_input', 'employed', 'q14_feedback')">
+                <button onclick="checkAnswer('q14_input', 'employed', 'q14_feedback')">Verificar Resposta</button>
+                <div id="q14_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 15 -->
+        <div class="phrase-block">
+            <h3>Frase 15:</h3>
+            <p><strong>Inglês:</strong> Future research should address. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Future%20research%20should%20address.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Pesquisas futuras devem abordar.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Future research"</strong> significa "Pesquisas futuras".</li>
+                    <li><strong>"should address"</strong> significa "devem abordar". "Should" (devem) expressa uma recomendação. "Address" (abordar) é um verbo comum em recomendações.</li>
+                    <li><strong>Propósito:</strong> Usada na seção de "Conclusão" ou "Discussão" para sugerir direções para estudos futuros.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Future research should ____."</p>
+                <input type="text" id="q15_input" onkeyup="checkAnswerOnEnter(event, 'q15_input', 'address', 'q15_feedback')">
+                <button onclick="checkAnswer('q15_input', 'address', 'q15_feedback')">Verificar Resposta</button>
+                <div id="q15_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Considerações para a Daby:</strong></p>
+            <p>Excelente trabalho na Aba 1! Você está começando a entender as frases mais básicas e importantes para introduzir um estudo. A repetição e a prática constante são suas maiores aliadas!</p>
+        </div>
+    </div>
+
+    <div id="tab2" class="tab-content">
+        <h2>Aba 2: Tópico Específico (Conforto Térmico e Aprendizagem)</h2>
+        <p>Nesta aba, vamos focar em frases que conectam o conforto térmico e a aprendizagem, que são os temas centrais do seu mestrado. Você verá como essas palavras se encaixam em diferentes estruturas.</p>
+        <p><strong>Instruções para Daby:</strong></p>
+        <ol>
+            <li>Ouça a frase em inglês clicando no ícone de áudio.</li>
+            <li>Leia a tradução e a explicação gramatical.</li>
+            <li>Tente preencher o espaço em branco com a palavra correta, usando o que você aprendeu.</li>
+            <li>Clique em "Verificar Resposta" para ver se acertou!</li>
+        </ol>
+
+        <!-- Frase 1 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 1:</h3>
+            <p><strong>Inglês:</strong> Thermal comfort influences student learning. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Thermal%20comfort%20influences%20student%20learning.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O conforto térmico influencia a aprendizagem do estudante.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Thermal comfort"</strong> significa "conforto térmico". É um termo técnico chave na sua área.</li>
+                    <li><strong>"influences"</strong> significa "influencia". O verbo "influence" (influenciar) ganha "s" porque "thermal comfort" (o conforto térmico) é singular (ele/it).</li>
+                    <li><strong>"student learning"</strong> significa "aprendizagem do estudante". "Student learning" é um substantivo composto, onde "student" funciona como adjetivo para "learning".</li>
+                    <li><strong>Propósito:</strong> Essa é uma afirmação direta e fundamental, que estabelece a relação central do seu mestrado.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Thermal comfort influences student ____."</p>
+                <input type="text" id="q1_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q1_tab2_input', 'learning', 'q1_tab2_feedback')">
+                <button onclick="checkAnswer('q1_tab2_input', 'learning', 'q1_tab2_feedback')">Verificar Resposta</button>
+                <div id="q1_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 2 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 2:</h3>
+            <p><strong>Inglês:</strong> Poor thermal comfort impacts cognition. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Poor%20thermal%20comfort%20impacts%20cognition.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O baixo conforto térmico impacta a cognição.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Poor thermal comfort"</strong> significa "baixo conforto térmico" ou "conforto térmico deficiente". "Poor" (pobre/deficiente) é um adjetivo.</li>
+                    <li><strong>"impacts"</strong> significa "impacta". O verbo "impact" (impactar) também ganha "s" porque "poor thermal comfort" é singular.</li>
+                    <li><strong>"cognition"</strong> significa "cognição". É um termo técnico relacionado aos processos mentais.</li>
+                    <li><strong>Propósito:</strong> Uma afirmação que detalha um efeito negativo específico do baixo conforto térmico.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Poor thermal comfort impacts ____."</p>
+                <input type="text" id="q2_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q2_tab2_input', 'cognition', 'q2_tab2_feedback')">
+                <button onclick="checkAnswer('q2_tab2_input', 'cognition', 'q2_tab2_feedback')">Verificar Resposta</button>
+                <div id="q2_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 3 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 3:</h3>
+            <p><strong>Inglês:</strong> This affects student attention. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20affects%20student%20attention.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso afeta a atenção do estudante.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This"</strong> (isso) refere-se à situação anterior (baixo conforto térmico).</li>
+                    <li><strong>"affects"</strong> significa "afeta". O verbo "affect" (afetar) ganha "s" porque "this" é singular.</li>
+                    <li><strong>"student attention"</strong> significa "atenção do estudante". Outro substantivo composto.</li>
+                    <li><strong>Propósito:</strong> Continua a descrever os efeitos negativos, focando em outro aspecto crucial para o aprendizado.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This affects student ____."</p>
+                <input type="text" id="q3_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q3_tab2_input', 'attention', 'q3_tab2_feedback')">
+                <button onclick="checkAnswer('q3_tab2_input', 'attention', 'q3_tab2_feedback')">Verificar Resposta</button>
+                <div id="q3_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 4 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 4:</h3>
+            <p><strong>Inglês:</strong> It reduces memory retention. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20reduces%20memory%20retention.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso reduz a retenção de memória.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It"</strong> (isso) também se refere à situação anterior.</li>
+                    <li><strong>"reduces"</strong> significa "reduz". O verbo "reduce" (reduzir) ganha "s" porque "it" é singular.</li>
+                    <li><strong>"memory retention"</strong> significa "retenção de memória". Mais um substantivo composto.</li>
+                    <li><strong>Propósito:</strong> Descreve outro efeito negativo direto no processo de aprendizagem.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It reduces memory ____."</p>
+                <input type="text" id="q4_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q4_tab2_input', 'retention', 'q4_tab2_feedback')">
+                <button onclick="checkAnswer('q4_tab2_input', 'retention', 'q4_tab2_feedback')">Verificar Resposta</button>
+                <div id="q4_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 5 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 5:</h3>
+            <p><strong>Inglês:</strong> Optimal conditions enhance learning. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Optimal%20conditions%20enhance%20learning.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Condições ótimas melhoram a aprendizagem.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Optimal conditions"</strong> significa "condições ótimas". "Optimal" (ótimo) é um adjetivo.</li>
+                    <li><strong>"enhance"</strong> significa "melhoram" ou "aprimoram". Como "conditions" (condições) é plural, o verbo não leva "s".</li>
+                    <li><strong>"learning"</strong> (aprendizagem) você já conhece.</li>
+                    <li><strong>Propósito:</strong> Apresenta o lado positivo da relação, mostrando que boas condições podem ter um efeito benéfico.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Optimal conditions enhance ____."</p>
+                <input type="text" id="q5_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q5_tab2_input', 'learning', 'q5_tab2_feedback')">
+                <button onclick="checkAnswer('q5_tab2_input', 'learning', 'q5_tab2_feedback')">Verificar Resposta</button>
+                <div id="q5_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 6 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 6:</h3>
+            <p><strong>Inglês:</strong> Environmental factors play a role. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Environmental%20factors%20play%20a%20role.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Fatores ambientais desempenham um papel.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Environmental factors"</strong> significa "fatores ambientais". "Environmental" (ambiental) é um adjetivo.</li>
+                    <li><strong>"play a role"</strong> significa "desempenham um papel". É uma expressão idiomática muito comum em inglês acadêmico. Como "factors" é plural, o verbo "play" (desempenhar) não leva "s".</li>
+                    <li><strong>Propósito:</strong> Uma frase geral que introduz a importância dos fatores ambientais em um contexto mais amplo.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Environmental factors play a ____."</p>
+                <input type="text" id="q6_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q6_tab2_input', 'role', 'q6_tab2_feedback')">
+                <button onclick="checkAnswer('q6_tab2_input', 'role', 'q6_tab2_feedback')">Verificar Resposta</button>
+                <div id="q6_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 7 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 7:</h3>
+            <p><strong>Inglês:</strong> This research investigates classroom conditions. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20research%20investigates%20classroom%20conditions.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Esta pesquisa investiga as condições da sala de aula.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This research investigates"</strong> (esta pesquisa investiga) você já conhece.</li>
+                    <li><strong>"classroom conditions"</strong> significa "condições da sala de aula". "Classroom" (sala de aula) funciona como adjetivo para "conditions" (condições).</li>
+                    <li><strong>Propósito:</strong> Especifica o local e o tipo de condições que estão sendo investigadas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This research investigates classroom ____."</p>
+                <input type="text" id="q7_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q7_tab2_input', 'conditions', 'q7_tab2_feedback')">
+                <button onclick="checkAnswer('q7_tab2_input', 'conditions', 'q7_tab2_feedback')">Verificar Resposta</button>
+                <div id="q7_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 8 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 8:</h3>
+            <p><strong>Inglês:</strong> The study explores student well-being. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20study%20explores%20student%20well-being.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O estudo explora o bem-estar do estudante.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The study explores"</strong> (o estudo explora) você já conhece.</li>
+                    <li><strong>"student well-being"</strong> significa "bem-estar do estudante". "Well-being" (bem-estar) é um substantivo composto importante.</li>
+                    <li><strong>Propósito:</strong> Indica que a pesquisa também considera o impacto nas condições gerais de saúde e conforto dos alunos.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The study explores student ____."</p>
+                <input type="text" id="q8_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q8_tab2_input', 'well-being', 'q8_tab2_feedback')">
+                <button onclick="checkAnswer('q8_tab2_input', 'well-being', 'q8_tab2_feedback')">Verificar Resposta</button>
+                <div id="q8_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 9 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 9:</h3>
+            <p><strong>Inglês:</strong> We analyze the effects on performance. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=We%20analyze%20the%20effects%20on%20performance.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Nós analisamos os efeitos no desempenho.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"We analyze"</strong> significa "Nós analisamos". "Analyze" (analisar) é o verbo.</li>
+                    <li><strong>"the effects on performance"</strong> significa "os efeitos no desempenho". "Effects" (efeitos) é um substantivo plural, e "performance" (desempenho) é outro termo chave. A preposição "on" (no/na) é usada para indicar o alvo dos efeitos.</li>
+                    <li><strong>Propósito:</strong> Indica que a pesquisa está avaliando como algo impacta o desempenho.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "We analyze the effects on ____."</p>
+                <input type="text" id="q9_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q9_tab2_input', 'performance', 'q9_tab2_feedback')">
+                <button onclick="checkAnswer('q9_tab2_input', 'performance', 'q9_tab2_feedback')">Verificar Resposta</button>
+                <div id="q9_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 10 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 10:</h3>
+            <p><strong>Inglês:</strong> This research aims to understand. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20research%20aims%20to%20understand.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Esta pesquisa visa entender.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This research aims"</strong> significa "Esta pesquisa visa" ou "Esta pesquisa tem como objetivo". "Aims" (visa) é o verbo com "s" para "it" (a pesquisa).</li>
+                    <li><strong>"to understand"</strong> significa "entender". O "to" indica o infinitivo.</li>
+                    <li><strong>Propósito:</strong> Uma forma comum de expressar o objetivo principal de um estudo.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This research aims to ____."</p>
+                <input type="text" id="q10_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q10_tab2_input', 'understand', 'q10_tab2_feedback')">
+                <button onclick="checkAnswer('q10_tab2_input', 'understand', 'q10_tab2_feedback')">Verificar Resposta</button>
+                <div id="q10_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 11 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 11:</h3>
+            <p><strong>Inglês:</strong> The findings highlight the importance. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20findings%20highlight%20the%20importance.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Os achados destacam a importância.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The findings highlight"</strong> (os achados destacam) você já conhece.</li>
+                    <li><strong>"the importance"</strong> significa "a importância".</li>
+                    <li><strong>Propósito:</strong> Usada para enfatizar a relevância de um aspecto específico com base nos resultados.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The findings highlight the ____."</p>
+                <input type="text" id="q11_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q11_tab2_input', 'importance', 'q11_tab2_feedback')">
+                <button onclick="checkAnswer('q11_tab2_input', 'importance', 'q11_tab2_feedback')">Verificar Resposta</button>
+                <div id="q11_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 12 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 12:</h3>
+            <p><strong>Inglês:</strong> We discuss implications for policy. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=We%20discuss%20implications%20for%20policy.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Nós discutimos implicações para a política.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"We discuss"</strong> significa "Nós discutimos".</li>
+                    <li><strong>"implications for policy"</strong> significa "implicações para a política". "Implications" (implicações) e "policy" (política/normas) são termos importantes em discussões de resultados.</li>
+                    <li><strong>Propósito:</strong> Indica que o estudo aborda as consequências práticas dos achados para a formulação de políticas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "We discuss implications for ____."</p>
+                <input type="text" id="q12_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q12_tab2_input', 'policy', 'q12_tab2_feedback')">
+                <button onclick="checkAnswer('q12_tab2_input', 'policy', 'q12_tab2_feedback')">Verificar Resposta</button>
+                <div id="q12_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 13 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 13:</h3>
+            <p><strong>Inglês:</strong> This suggests further investigation. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20suggests%20further%20investigation.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso sugere investigação adicional.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This suggests"</strong> (isso sugere) você já conhece.</li>
+                    <li><strong>"further investigation"</strong> significa "investigação adicional" ou "mais investigação". "Further" (adicional) é um adjetivo comum em recomendações.</li>
+                    <li><strong>Propósito:</strong> Usada para indicar que mais pesquisa é necessária sobre o tema.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This suggests further ____."</p>
+                <input type="text" id="q13_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q13_tab2_input', 'investigation', 'q13_tab2_feedback')">
+                <button onclick="checkAnswer('q13_tab2_input', 'investigation', 'q13_tab2_feedback')">Verificar Resposta</button>
+                <div id="q13_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 14 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 14:</h3>
+            <p><strong>Inglês:</strong> The current literature supports. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20current%20literature%20supports.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A literatura atual apoia.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The current literature"</strong> significa "A literatura atual". "Current" (atual) é um adjetivo.</li>
+                    <li><strong>"supports"</strong> significa "apoia". O verbo "support" (apoiar) ganha "s" porque "literature" (a literatura) é singular.</li>
+                    <li><strong>Propósito:</strong> Usada para mostrar que os achados do estudo estão em linha com o conhecimento existente.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The current literature ____."</p>
+                <input type="text" id="q14_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q14_tab2_input', 'supports', 'q14_tab2_feedback')">
+                <button onclick="checkAnswer('q14_tab2_input', 'supports', 'q14_tab2_feedback')">Verificar Resposta</button>
+                <div id="q14_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 15 (Aba 2) -->
+        <div class="phrase-block">
+            <h3>Frase 15:</h3>
+            <p><strong>Inglês:</strong> We present data on memory and thermal comfort. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=We%20present%20data%20on%20memory%20and%20thermal%20comfort.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Nós apresentamos dados sobre memória e conforto térmico.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li>Esta frase é uma repetição intencional da Frase 6 da Aba 1, mas com o vocabulário específico do seu mestrado.</li>
+                    <li><strong>"We present data"</strong> (Nós apresentamos dados) você já viu.</li>
+                    <li><strong>"on memory"</strong> significa "sobre memória". "Memory" (memória) é outro foco do seu mestrado.</li>
+                    <li><strong>"and thermal comfort"</strong> (e conforto térmico) você já viu. A conjunção "and" (e) é usada para conectar elementos.</li>
+                    <li><strong>Propósito:</strong> Mostra como os autores introduzem os dados que serão apresentados, especificando os tópicos que esses dados cobrem.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "We present data on memory and ____ comfort."</p>
+                <input type="text" id="q15_tab2_input" onkeyup="checkAnswerOnEnter(event, 'q15_tab2_input', 'thermal', 'q15_tab2_feedback')">
+                <button onclick="checkAnswer('q15_tab2_input', 'thermal', 'q15_tab2_feedback')">Verificar Resposta</button>
+                <div id="q15_tab2_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Considerações para a Daby:</strong></p>
+            <p>Excelente trabalho na Aba 2! Você está começando a conectar as estruturas das frases com o vocabulário específico do seu mestrado. Perceba como as palavras "thermal comfort", "student learning", "influence", "impact", "attention", "memory" e "cognition" começam a aparecer nas frases. Quanto mais você as vir e as usar, mais fácil será reconhecê-las nos artigos. A repetição e a prática constante são suas maiores aliadas!</p>
+        </div>
+    </div>
+
+    <div id="tab3" class="tab-content">
+        <h2>Aba 3: Contextualizando e Analisando a Literatura</h2>
+        <p>Nesta aba, vamos explorar frases que ajudam a contextualizar a pesquisa, a identificar motivações para estudos e a analisar a literatura existente. Essas são habilidades cruciais para a sua revisão bibliográfica.</p>
+        <p><strong>Instruções para Daby:</strong></p>
+        <ol>
+            <li>Ouça a frase em inglês clicando no ícone de áudio.</li>
+            <li>Leia a tradução e a explicação gramatical.</li>
+            <li>Tente preencher o espaço em branco com a palavra correta, usando o que você aprendeu.</li>
+            <li>Clique em "Verificar Resposta" para ver se acertou!</li>
+        </ol>
+
+        <!-- Frase 1 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 1:</h3>
+            <p><strong>Inglês:</strong> Environmental comfort directly influences learning. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Environmental%20comfort%20directly%20influences%20learning.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O conforto ambiental influencia diretamente a aprendizagem.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Environmental comfort"</strong> significa "conforto ambiental". É um termo mais amplo que "thermal comfort".</li>
+                    <li><strong>"directly influences"</strong> significa "influencia diretamente". "Directly" (diretamente) é um advérbio que intensifica a relação. "Influences" (influencia) você já conhece.</li>
+                    <li><strong>"learning"</strong> (aprendizagem) você já conhece.</li>
+                    <li><strong>Propósito:</strong> Estabelece uma relação de causa e efeito clara e forte, comum em introduções.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Environmental comfort directly ____ learning."</p>
+                <input type="text" id="q1_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q1_tab3_input', 'influences', 'q1_tab3_feedback')">
+                <button onclick="checkAnswer('q1_tab3_input', 'influences', 'q1_tab3_feedback')">Verificar Resposta</button>
+                <div id="q1_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 2 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 2:</h3>
+            <p><strong>Inglês:</strong> It is necessary to identify favorable environmental conditions. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20is%20necessary%20to%20identify%20favorable%20environmental%20conditions.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> É necessário identificar condições ambientais favoráveis.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It is necessary"</strong> significa "É necessário". É uma construção impessoal que expressa uma necessidade.</li>
+                    <li><strong>"to identify"</strong> significa "identificar". O "to" indica o infinitivo.</li>
+                    <li><strong>"favorable environmental conditions"</strong> significa "condições ambientais favoráveis". "Favorable" (favorável) é um adjetivo.</li>
+                    <li><strong>Propósito:</strong> Aponta para a importância da pesquisa em determinar quais condições são benéficas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It is necessary to identify favorable environmental ____."</p>
+                <input type="text" id="q2_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q2_tab3_input', 'conditions', 'q2_tab3_feedback')">
+                <button onclick="checkAnswer('q2_tab3_input', 'conditions', 'q2_tab3_feedback')">Verificar Resposta</button>
+                <div id="q2_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 3 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 3:</h3>
+            <p><strong>Inglês:</strong> This has motivated research on environmental factors. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20has%20motivated%20research%20on%20environmental%20factors.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso tem motivado pesquisas sobre fatores ambientais.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This has motivated"</strong> significa "Isso tem motivado". É uma estrutura de presente perfeito ("has" + particípio passado "motivated"), indicando uma ação que começou no passado e tem relevância no presente.</li>
+                    <li><strong>"research on environmental factors"</strong> significa "pesquisas sobre fatores ambientais". "On" (sobre) é a preposição correta.</li>
+                    <li><strong>Propósito:</strong> Explica a razão pela qual muitos estudos na área são conduzidos.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This has motivated research on environmental ____."</p>
+                <input type="text" id="q3_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q3_tab3_input', 'factors', 'q3_tab3_feedback')">
+                <button onclick="checkAnswer('q3_tab3_input', 'factors', 'q3_tab3_feedback')">Verificar Resposta</button>
+                <div id="q3_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 4 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 4:</h3>
+            <p><strong>Inglês:</strong> The literature review aims to systematically organize the literature. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20literature%20review%20aims%20to%20systematically%20organize%20the%20literature.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A revisão da literatura visa organizar sistematicamente a literatura.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The literature review"</strong> significa "A revisão da literatura". É um termo chave para o mestrado da Daby.</li>
+                    <li><strong>"aims to"</strong> (visa) você já conhece.</li>
+                    <li><strong>"systematically organize"</strong> significa "organizar sistematicamente". "Systematically" (sistematicamente) é um advérbio que descreve como a organização é feita.</li>
+                    <li><strong>"the literature"</strong> (a literatura) você já conhece.</li>
+                    <li><strong>Propósito:</strong> Descreve o objetivo de uma revisão de literatura, que é fundamental para a Daby.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The literature review aims to systematically organize the ____."</p>
+                <input type="text" id="q4_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q4_tab3_input', 'literature', 'q4_tab3_feedback')">
+                <button onclick="checkAnswer('q4_tab3_input', 'literature', 'q4_tab3_feedback')">Verificar Resposta</button>
+                <div id="q4_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 5 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 5:</h3>
+            <p><strong>Inglês:</strong> It also seeks to classify and categorize studies. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20also%20seeks%20to%20classify%20and%20categorize%20studies.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Também busca classificar e categorizar estudos.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It also seeks to"</strong> significa "Também busca". "Seeks" (busca) é o verbo com "s" para "it" (a revisão).</li>
+                    <li><strong>"classify and categorize"</strong> significa "classificar e categorizar". São verbos importantes para a análise de literatura.</li>
+                    <li><strong>"studies"</strong> (estudos) você já conhece.</li>
+                    <li><strong>Propósito:</strong> Detalha outras ações importantes realizadas em uma revisão de literatura.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It also seeks to classify and categorize ____."</p>
+                <input type="text" id="q5_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q5_tab3_input', 'studies', 'q5_tab3_feedback')">
+                <button onclick="checkAnswer('q5_tab3_input', 'studies', 'q5_tab3_feedback')">Verificar Resposta</button>
+                <div id="q5_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 6 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 6:</h3>
+            <p><strong>Inglês:</strong> The main conclusions are that. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20main%20conclusions%20are%20that.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> As principais conclusões são que.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The main conclusions"</strong> significa "As principais conclusões". "Main" (principal) é um adjetivo.</li>
+                    <li><strong>"are that"</strong> significa "são que". "Are" (são) é o verbo "to be" no plural. "That" (que) introduz a conclusão.</li>
+                    <li><strong>Propósito:</strong> Frase padrão para apresentar os resultados gerais ou as conclusões de uma revisão.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The main conclusions are ____."</p>
+                <input type="text" id="q6_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q6_tab3_input', 'that', 'q6_tab3_feedback')">
+                <button onclick="checkAnswer('q6_tab3_input', 'that', 'q6_tab3_feedback')">Verificar Resposta</button>
+                <div id="q6_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 7 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 7:</h3>
+            <p><strong>Inglês:</strong> There are multiple research opportunities. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=There%20are%20multiple%20research%20opportunities.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Existem múltiplas oportunidades de pesquisa.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"There are"</strong> significa "Existem" ou "Há". Usado para indicar a existência de algo plural.</li>
+                    <li><strong>"multiple research opportunities"</strong> significa "múltiplas oportunidades de pesquisa". "Multiple" (múltiplas) é um adjetivo.</li>
+                    <li><strong>Propósito:</strong> Usada para apontar para o potencial de estudos futuros na área.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "There are multiple research ____."</p>
+                <input type="text" id="q7_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q7_tab3_input', 'opportunities', 'q7_tab3_feedback')">
+                <button onclick="checkAnswer('q7_tab3_input', 'opportunities', 'q7_tab3_feedback')">Verificar Resposta</button>
+                <div id="q7_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 8 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 8:</h3>
+            <p><strong>Inglês:</strong> The study variables of most significant interest were associated with thermal comfort. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20study%20variables%20of%20most%20significant%20interest%20were%20associated%20with%20thermal%20comfort.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> As variáveis de estudo de maior interesse foram associadas ao conforto térmico.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The study variables"</strong> significa "As variáveis de estudo".</li>
+                    <li><strong>"of most significant interest"</strong> significa "de maior interesse significativo".</li>
+                    <li><strong>"were associated with"</strong> significa "foram associadas com". É uma estrutura de voz passiva no passado.</li>
+                    <li><strong>"thermal comfort"</strong> (conforto térmico) você já conhece.</li>
+                    <li><strong>Propósito:</strong> Resume achados de revisões, destacando o foco principal das pesquisas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The study variables of most significant interest were associated with ____ comfort."</p>
+                <input type="text" id="q8_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q8_tab3_input', 'thermal', 'q8_tab3_feedback')">
+                <button onclick="checkAnswer('q8_tab3_input', 'thermal', 'q8_tab3_feedback')">Verificar Resposta</button>
+                <div id="q8_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 9 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 9:</h3>
+            <p><strong>Inglês:</strong> Most studies do not measure variables related to learning. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Most%20studies%20do%20not%20measure%20variables%20related%20to%20learning.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A maioria dos estudos não mede variáveis relacionadas à aprendizagem.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Most studies"</strong> significa "A maioria dos estudos".</li>
+                    <li><strong>"do not measure"</strong> significa "não mede". É a forma negativa do presente simples para sujeitos plurais.</li>
+                    <li><strong>"variables related to learning"</strong> significa "variáveis relacionadas à aprendizagem".</li>
+                    <li><strong>Propósito:</strong> Identifica uma lacuna importante na literatura, que pode justificar a pesquisa da Daby.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Most studies do not measure variables related to ____."</p>
+                <input type="text" id="q9_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q9_tab3_input', 'learning', 'q9_tab3_feedback')">
+                <button onclick="checkAnswer('q9_tab3_input', 'learning', 'q9_tab3_feedback')">Verificar Resposta</button>
+                <div id="q9_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 10 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 10:</h3>
+            <p><strong>Inglês:</strong> They do not identify a variable of potential study. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=They%20do%20not%20identify%20a%20variable%20of%20potential%20study.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Eles não identificam uma variável de estudo potencial.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"They do not identify"</strong> significa "Eles não identificam". "They" (eles) refere-se aos estudos.</li>
+                    <li><strong>"a variable of potential study"</strong> significa "uma variável de estudo potencial". "Potential" (potencial) é um adjetivo.</li>
+                    <li><strong>Propósito:</strong> Outra forma de apontar uma lacuna, focando na falta de identificação de novas variáveis.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "They do not identify a variable of potential ____."</p>
+                <input type="text" id="q10_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q10_tab3_input', 'study', 'q10_tab3_feedback')">
+                <button onclick="checkAnswer('q10_tab3_input', 'study', 'q10_tab3_feedback')">Verificar Resposta</button>
+                <div id="q10_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 11 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 11:</h3>
+            <p><strong>Inglês:</strong> The common motivation is seasonal change. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20common%20motivation%20is%20seasonal%20change.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A motivação comum é a mudança sazonal.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The common motivation"</strong> significa "A motivação comum". "Common" (comum) é um adjetivo.</li>
+                    <li><strong>"is seasonal change"</strong> significa "é a mudança sazonal". "Seasonal change" (mudança sazonal) é um termo importante.</li>
+                    <li><strong>Propósito:</strong> Resume uma das principais razões para a pesquisa na área.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The common motivation is seasonal ____."</p>
+                <input type="text" id="q11_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q11_tab3_input', 'change', 'q11_tab3_feedback')">
+                <button onclick="checkAnswer('q11_tab3_input', 'change', 'q11_tab3_feedback')">Verificar Resposta</button>
+                <div id="q11_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 12 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 12:</h3>
+            <p><strong>Inglês:</strong> This suggests a focus on thermal comfort. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20suggests%20a%20focus%20on%20thermal%20comfort.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso sugere um foco no conforto térmico.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This suggests"</strong> (isso sugere) você já conhece.</li>
+                    <li><strong>"a focus on thermal comfort"</strong> significa "um foco no conforto térmico". "Focus" (foco) é um substantivo aqui.</li>
+                    <li><strong>Propósito:</strong> Indica que a evidência aponta para uma área específica de concentração na pesquisa.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This suggests a focus on ____ comfort."</p>
+                <input type="text" id="q12_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q12_tab3_input', 'thermal', 'q12_tab3_feedback')">
+                <button onclick="checkAnswer('q12_tab3_input', 'thermal', 'q12_tab3_feedback')">Verificar Resposta</button>
+                <div id="q12_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 13 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 13:</h3>
+            <p><strong>Inglês:</strong> The most significant interest is in Europe and Asia. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20most%20significant%20interest%20is%20in%20Europe%20and%20Asia.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O interesse mais significativo está na Europa e Ásia.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The most significant interest"</strong> significa "O interesse mais significativo". "Most significant" (mais significativo) é um superlativo.</li>
+                    <li><strong>"is in Europe and Asia"</strong> significa "está na Europa e Ásia". "In" (em/na) é a preposição.</li>
+                    <li><strong>Propósito:</strong> Apresenta uma conclusão sobre a distribuição geográfica da pesquisa na área.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The most significant interest is in Europe and ____."</p>
+                <input type="text" id="q13_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q13_tab3_input', 'Asia', 'q13_tab3_feedback')">
+                <button onclick="checkAnswer('q13_tab3_input', 'Asia', 'q13_tab3_feedback')">Verificar Resposta</button>
+                <div id="q13_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 14 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 14:</h3>
+            <p><strong>Inglês:</strong> The countries with the most significant interest are in Europe. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20countries%20with%20the%20most%20significant%20interest%20are%20in%20Europe.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Os países com o interesse mais significativo estão na Europa.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The countries with"</strong> significa "Os países com".</li>
+                    <li><strong>"the most significant interest"</strong> (o interesse mais significativo) você já viu.</li>
+                    <li><strong>"are in Europe"</strong> significa "estão na Europa". "Are" (estão) é o verbo "to be" no plural.</li>
+                    <li><strong>Propósito:</strong> Outra forma de expressar a distribuição geográfica do interesse na pesquisa.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The countries with the most significant interest are in ____."</p>
+                <input type="text" id="q14_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q14_tab3_input', 'Europe', 'q14_tab3_feedback')">
+                <button onclick="checkAnswer('q14_tab3_input', 'Europe', 'q14_tab3_feedback')">Verificar Resposta</button>
+                <div id="q14_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 15 (Aba 3) -->
+        <div class="phrase-block">
+            <h3>Frase 15:</h3>
+            <p><strong>Inglês:</strong> The study variables of most significant interest were associated with thermal comfort. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20study%20variables%20of%20most%20significant%20interest%20were%20associated%20with%20thermal%20comfort.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> As variáveis de estudo de maior interesse foram associadas ao conforto térmico.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li>Esta frase é uma repetição intencional da Frase 8 desta aba para reforçar a importância e a estrutura.</li>
+                    <li><strong>"The study variables"</strong> significa "As variáveis de estudo".</li>
+                    <li><strong>"of most significant interest"</strong> significa "de maior interesse significativo".</li>
+                    <li><strong>"were associated with"</strong> significa "foram associadas com".</li>
+                    <li><strong>"thermal comfort"</strong> (conforto térmico) você já conhece.</li>
+                    <li><strong>Propósito:</strong> A repetição ajuda a fixar padrões e vocabulário. Esta frase é fundamental para resumir achados de revisões, destacando o foco principal das pesquisas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The study variables of most significant interest were associated with ____ comfort."</p>
+                <input type="text" id="q15_tab3_input" onkeyup="checkAnswerOnEnter(event, 'q15_tab3_input', 'thermal', 'q15_tab3_feedback')">
+                <button onclick="checkAnswer('q15_tab3_input', 'thermal', 'q15_tab3_feedback')">Verificar Resposta</button>
+                <div id="q15_tab3_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Considerações para a Daby:</strong></p>
+            <p>Muito bem, Daby! Nesta aba, você aprendeu a lidar com frases que contextualizam a pesquisa, identificam motivações e, o mais importante, apontam para lacunas na literatura. Essas são habilidades cruciais para o seu mestrado, pois permitem que você não apenas entenda o que já foi feito, mas também posicione a sua própria pesquisa como uma contribuição valiosa. Continue praticando e conectando essas ideias!</p>
+        </div>
+    </div>
+
+    <div id="tab4" class="tab-content">
+        <h2>Aba 4: Justificativa e Fatores Ambientais</h2>
+        <p>Nesta aba, vamos aprofundar a justificativa para a pesquisa em conforto ambiental em edifícios escolares, explorando a importância desses ambientes e os fatores que compõem a qualidade ambiental interna.</p>
+        <p><strong>Instruções para Daby:</strong></p>
+        <ol>
+            <li>Ouça a frase em inglês clicando no ícone de áudio.</li>
+            <li>Leia a tradução e a explicação gramatical.</li>
+            <li>Tente preencher o espaço em branco com a palavra correta, usando o que você aprendeu.</li>
+            <li>Clique em "Verificar Resposta" para ver se acertou!</li>
+        </ol>
+
+        <!-- Frase 1 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 1:</h3>
+            <p><strong>Inglês:</strong> School buildings are critical environments. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=School%20buildings%20are%20critical%20environments.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Edifícios escolares são ambientes críticos.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"School buildings"</strong> significa "Edifícios escolares". "School" (escola) funciona como adjetivo para "buildings" (edifícios).</li>
+                    <li><strong>"are critical environments"</strong> significa "são ambientes críticos". "Critical" (críticos) é um adjetivo que enfatiza a importância.</li>
+                    <li><strong>Propósito:</strong> Uma afirmação forte que estabelece a relevância do local de estudo.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "School buildings are critical ____."</p>
+                <input type="text" id="q1_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q1_tab4_input', 'environments', 'q1_tab4_feedback')">
+                <button onclick="checkAnswer('q1_tab4_input', 'environments', 'q1_tab4_feedback')">Verificar Resposta</button>
+                <div id="q1_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 2 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 2:</h3>
+            <p><strong>Inglês:</strong> Their environmental quality variables are susceptible to study. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Their%20environmental%20quality%20variables%20are%20susceptible%20to%20study.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Suas variáveis de qualidade ambiental são suscetíveis a estudo.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Their"</strong> significa "suas/seus". É um pronome possessivo.</li>
+                    <li><strong>"environmental quality variables"</strong> significa "variáveis de qualidade ambiental". "Environmental quality" (qualidade ambiental) funciona como adjetivo para "variables" (variáveis).</li>
+                    <li><strong>"are susceptible to study"</strong> significa "são suscetíveis a estudo". "Susceptible to" (suscetível a) é uma expressão comum.</li>
+                    <li><strong>Propósito:</strong> Justifica a pesquisa, indicando que há aspectos mensuráveis e passíveis de investigação.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Their environmental quality variables are susceptible to ____."</p>
+                <input type="text" id="q2_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q2_tab4_input', 'study', 'q2_tab4_feedback')">
+                <button onclick="checkAnswer('q2_tab4_input', 'study', 'q2_tab4_feedback')">Verificar Resposta</button>
+                <div id="q2_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 3 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 3:</h3>
+            <p><strong>Inglês:</strong> This is because of their direct influence on learning outcomes. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20is%20because%20of%20their%20direct%20influence%20on%20learning%20outcomes.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso se deve à sua influência direta nos resultados de aprendizagem.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This is because of"</strong> significa "Isso se deve a" ou "Isso é por causa de". "Because of" (por causa de) introduz a razão.</li>
+                    <li><strong>"their direct influence"</strong> significa "sua influência direta". "Direct" (direta) é um adjetivo.</li>
+                    <li><strong>"on learning outcomes"</strong> significa "nos resultados de aprendizagem". "Learning outcomes" (resultados de aprendizagem) é um termo chave.</li>
+                    <li><strong>Propósito:</strong> Explica a importância da qualidade ambiental, ligando-a diretamente aos resultados educacionais.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This is because of their direct influence on learning ____."</p>
+                <input type="text" id="q3_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q3_tab4_input', 'outcomes', 'q3_tab4_feedback')">
+                <button onclick="checkAnswer('q3_tab4_input', 'outcomes', 'q3_tab4_feedback')">Verificar Resposta</button>
+                <div id="q3_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 4 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 4:</h3>
+            <p><strong>Inglês:</strong> They also affect student well-being and performance. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=They%20also%20affect%20student%20well-being%20and%20performance.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Eles também afetam o bem-estar e o desempenho do estudante.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"They also affect"</strong> significa "Eles também afetam". "They" (eles) refere-se aos edifícios escolares ou às variáveis.</li>
+                    <li><strong>"student well-being and performance"</strong> significa "bem-estar e desempenho do estudante". "Well-being" (bem-estar) e "performance" (desempenho) são termos importantes.</li>
+                    <li><strong>Propósito:</strong> Amplia o escopo da influência, incluindo aspectos de saúde e desempenho geral.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "They also affect student well-being and ____."</p>
+                <input type="text" id="q4_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q4_tab4_input', 'performance', 'q4_tab4_feedback')">
+                <button onclick="checkAnswer('q4_tab4_input', 'performance', 'q4_tab4_feedback')">Verificar Resposta</button>
+                <div id="q4_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 5 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 5:</h3>
+            <p><strong>Inglês:</strong> The design of educational spaces is crucial. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20design%20of%20educational%20spaces%20is%20crucial.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O design de espaços educacionais é crucial.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The design of educational spaces"</strong> significa "O design de espaços educacionais". "Educational spaces" (espaços educacionais) é um termo chave.</li>
+                    <li><strong>"is crucial"</strong> significa "é crucial". "Crucial" (crucial) é um adjetivo forte.</li>
+                    <li><strong>Propósito:</strong> Enfatiza a importância do planejamento e da arquitetura dos ambientes de ensino.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The design of educational spaces is ____."</p>
+                <input type="text" id="q5_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q5_tab4_input', 'crucial', 'q5_tab4_feedback')">
+                <button onclick="checkAnswer('q5_tab4_input', 'crucial', 'q5_tab4_feedback')">Verificar Resposta</button>
+                <div id="q5_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 6 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 6:</h3>
+            <p><strong>Inglês:</strong> It ensures optimal conditions for learning. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20ensures%20optimal%20conditions%20for%20learning.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Ele garante condições ótimas para a aprendizagem.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It ensures"</strong> significa "Ele garante". "Ensures" (garante) é o verbo com "s" para "it" (o design).</li>
+                    <li><strong>"optimal conditions for learning"</strong> significa "condições ótimas para a aprendizagem". "Optimal" (ótimo) e "learning" (aprendizagem) são termos que você já conhece.</li>
+                    <li><strong>Propósito:</strong> Explica a função do design, ligando-o diretamente à criação de ambientes propícios ao aprendizado.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It ensures optimal conditions for ____."</p>
+                <input type="text" id="q6_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q6_tab4_input', 'learning', 'q6_tab4_feedback')">
+                <button onclick="checkAnswer('q6_tab4_input', 'learning', 'q6_tab4_feedback')">Verificar Resposta</button>
+                <div id="q6_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 7 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 7:</h3>
+            <p><strong>Inglês:</strong> Research on indoor environmental quality is growing globally. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Research%20on%20indoor%20environmental%20quality%20is%20growing%20globally.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A pesquisa sobre qualidade ambiental interna está crescendo globalmente.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Research on indoor environmental quality"</strong> significa "Pesquisa sobre qualidade ambiental interna". "Indoor environmental quality" (IEQ) é um termo chave.</li>
+                    <li><strong>"is growing globally"</strong> significa "está crescendo globalmente". "Is growing" (está crescendo) é o presente contínuo. "Globally" (globalmente) é um advérbio.</li>
+                    <li><strong>Propósito:</strong> Contextualiza a pesquisa da Daby em um cenário mundial, mostrando a relevância e o aumento do interesse.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Research on indoor environmental quality is growing ____."</p>
+                <input type="text" id="q7_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q7_tab4_input', 'globally', 'q7_tab4_feedback')">
+                <button onclick="checkAnswer('q7_tab4_input', 'globally', 'q7_tab4_feedback')">Verificar Resposta</button>
+                <div id="q7_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 8 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 8:</h3>
+            <p><strong>Inglês:</strong> This is due to the impact on human health. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20is%20due%20to%20the%20impact%20on%20human%20health.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso se deve ao impacto na saúde humana.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This is due to"</strong> significa "Isso se deve a". Similar a "because of".</li>
+                    <li><strong>"the impact on human health"</strong> significa "o impacto na saúde humana". "Human health" (saúde humana) é um termo importante.</li>
+                    <li><strong>Propósito:</strong> Explica uma das principais razões para o crescimento da pesquisa em IEQ.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This is due to the impact on human ____."</p>
+                <input type="text" id="q8_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q8_tab4_input', 'health', 'q8_tab4_feedback')">
+                <button onclick="checkAnswer('q8_tab4_input', 'health', 'q8_tab4_feedback')">Verificar Resposta</button>
+                <div id="q8_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 9 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 9:</h3>
+            <p><strong>Inglês:</strong> It also affects well-being and productivity. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20also%20affects%20well-being%20and%20productivity.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Também afeta o bem-estar e a produtividade.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It also affects"</strong> (também afeta) você já conhece.</li>
+                    <li><strong>"well-being and productivity"</strong> significa "bem-estar e produtividade". "Productivity" (produtividade) é um termo importante em contextos de desempenho.</li>
+                    <li><strong>Propósito:</strong> Continua a listar os impactos da IEQ, ampliando para a produtividade.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It also affects well-being and ____."</p>
+                <input type="text" id="q9_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q9_tab4_input', 'productivity', 'q9_tab4_feedback')">
+                <button onclick="checkAnswer('q9_tab4_input', 'productivity', 'q9_tab4_feedback')">Verificar Resposta</button>
+                <div id="q9_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 10 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 10:</h3>
+            <p><strong>Inglês:</strong> The quality of school infrastructure is key. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20quality%20of%20school%20infrastructure%20is%20key.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A qualidade da infraestrutura escolar é fundamental.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The quality of school infrastructure"</strong> significa "A qualidade da infraestrutura escolar". "Infrastructure" (infraestrutura) é um termo técnico.</li>
+                    <li><strong>"is key"</strong> significa "é fundamental" ou "é a chave". "Key" (chave) como adjetivo é muito comum para expressar importância.</li>
+                    <li><strong>Propósito:</strong> Enfatiza a importância da infraestrutura física dos edifícios escolares.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The quality of school infrastructure is ____."</p>
+                <input type="text" id="q10_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q10_tab4_input', 'key', 'q10_tab4_feedback')">
+                <button onclick="checkAnswer('q10_tab4_input', 'key', 'q10_tab4_feedback')">Verificar Resposta</button>
+                <div id="q10_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 11 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 11:</h3>
+            <p><strong>Inglês:</strong> It directly influences the indoor environmental quality. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20directly%20influences%20the%20indoor%20environmental%20quality.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Ela influencia diretamente a qualidade ambiental interna.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It directly influences"</strong> (ela influencia diretamente) você já conhece. "It" refere-se à infraestrutura.</li>
+                    <li><strong>"the indoor environmental quality"</strong> (a qualidade ambiental interna) você já conhece.</li>
+                    <li><strong>Propósito:</strong> Conecta a qualidade da infraestrutura com a IEQ, mostrando a relação de causa e efeito.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It directly influences the indoor environmental ____."</p>
+                <input type="text" id="q11_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q11_tab4_input', 'quality', 'q11_tab4_feedback')">
+                <button onclick="checkAnswer('q11_tab4_input', 'quality', 'q11_tab4_feedback')">Verificar Resposta</button>
+                <div id="q11_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 12 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 12:</h3>
+            <p><strong>Inglês:</strong> This research considers the four main aspects of indoor environmental quality. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20research%20considers%20the%20four%20main%20aspects%20of%20indoor%20environmental%20quality.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Esta pesquisa considera os quatro principais aspectos da qualidade ambiental interna.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This research considers"</strong> significa "Esta pesquisa considera". "Considers" tem "s" porque "research" é singular.</li>
+                    <li><strong>"the four main aspects"</strong> significa "os quatro principais aspectos".</li>
+                    <li><strong>"of indoor environmental quality"</strong> significa "da qualidade ambiental interna". "Indoor" (interno) é um adjetivo importante na sua área.</li>
+                    <li><strong>Propósito:</strong> Introduz a categorização dos fatores ambientais, que é um ponto chave do seu contexto.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This research considers the four main aspects of indoor environmental ____."</p>
+                <input type="text" id="q12_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q12_tab4_input', 'quality', 'q12_tab4_feedback')">
+                <button onclick="checkAnswer('q12_tab4_input', 'quality', 'q12_tab4_feedback')">Verificar Resposta</button>
+                <div id="q12_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 13 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 13:</h3>
+            <p><strong>Inglês:</strong> These aspects include air quality, thermal comfort, visual quality, and acoustic quality. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=These%20aspects%20include%20air%20quality%2C%20thermal%20comfort%2C%20visual%20quality%2C%20and%20acoustic%20quality.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Esses aspectos incluem qualidade do ar, conforto térmico, qualidade visual e qualidade acústica.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"These aspects include"</strong> significa "Esses aspectos incluem". "Include" (incluir) é o verbo.</li>
+                    <li><strong>"air quality"</strong> (qualidade do ar), <strong>"thermal comfort"</strong> (conforto térmico), <strong>"visual quality"</strong> (qualidade visual), e <strong>"acoustic quality"</strong> (qualidade acústica) são os quatro pilares.</li>
+                    <li><strong>Propósito:</strong> Lista os componentes específicos da qualidade ambiental interna, essencial para a Daby.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "These aspects include air quality, thermal comfort, visual quality, and ____ quality."</p>
+                <input type="text" id="q13_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q13_tab4_input', 'acoustic', 'q13_tab4_feedback')">
+                <button onclick="checkAnswer('q13_tab4_input', 'acoustic', 'q13_tab4_feedback')">Verificar Resposta</button>
+                <div id="q13_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 14 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 14:</h3>
+            <p><strong>Inglês:</strong> Most of this research has been motivated by the exploration of adaptations for seasonal change. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Most%20of%20this%20research%20has%20been%20motivated%20by%20the%20exploration%20of%20adaptations%20for%20seasonal%20change.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> A maior parte desta pesquisa tem sido motivada pela exploração de adaptações para a mudança sazonal.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Most of this research"</strong> significa "A maior parte desta pesquisa".</li>
+                    <li><strong>"has been motivated by"</strong> significa "tem sido motivada por". É uma estrutura de presente perfeito na voz passiva.</li>
+                    <li><strong>"the exploration of adaptations for seasonal change"</strong> significa "a exploração de adaptações para a mudança sazonal". "Seasonal change" (mudança sazonal) é um termo importante.</li>
+                    <li><strong>Propósito:</strong> Explica uma motivação comum por trás de muitas pesquisas na área, ligando-a à variação climática.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Most of this research has been motivated by the exploration of adaptations for ____ change."</p>
+                <input type="text" id="q14_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q14_tab4_input', 'seasonal', 'q14_tab4_feedback')">
+                <button onclick="checkAnswer('q14_tab4_input', 'seasonal', 'q14_tab4_feedback')">Verificar Resposta</button>
+                <div id="q14_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 15 (Aba 4) -->
+        <div class="phrase-block">
+            <h3>Frase 15:</h3>
+            <p><strong>Inglês:</strong> Children and young people must develop academic activities during the school year. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Children%20and%20young%20people%20must%20develop%20academic%20activities%20during%20the%20school%20year.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Crianças e jovens devem desenvolver atividades acadêmicas durante o ano letivo.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Children and young people"</strong> significa "Crianças e jovens".</li>
+                    <li><strong>"must develop"</strong> significa "devem desenvolver". "Must" (devem) expressa necessidade ou obrigação.</li>
+                    <li><strong>"academic activities"</strong> significa "atividades acadêmicas".</li>
+                    <li><strong>"during the school year"</strong> significa "durante o ano letivo".</li>
+                    <li><strong>Propósito:</strong> Reforça a necessidade de condições adequadas, pois os estudantes precisam realizar suas atividades independentemente das condições externas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Children and young people must develop academic activities during the ____ year."</p>
+                <input type="text" id="q15_tab4_input" onkeyup="checkAnswerOnEnter(event, 'q15_tab4_input', 'school', 'q15_tab4_feedback')">
+                <button onclick="checkAnswer('q15_tab4_input', 'school', 'q15_tab4_feedback')">Verificar Resposta</button>
+                <div id="q15_tab4_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Considerações para a Daby:</strong></p>
+            <p>Fantástico, Daby! Nesta quarta aba, você mergulhou fundo na justificativa da pesquisa em conforto ambiental em edifícios escolares. Aprendeu a expressar a importância desses ambientes, a necessidade de um design cuidadoso e os quatro pilares da qualidade ambiental interna. Entender essas frases é crucial para a sua revisão bibliográfica, pois elas formam a base argumentativa de muitos artigos na sua área. Continue a praticar e a conectar essas ideias para construir um entendimento robusto!</p>
+        </div>
+    </div>
+
+    <div id="tab5" class="tab-content">
+        <h2>Aba 5: Influência, Desempenho e Implicações Regulatórias</h2>
+        <p>Nesta aba, vamos explorar a complexa relação entre as condições ambientais e o desempenho cognitivo, a importância da pesquisa em Qualidade Ambiental Interna (IEQ), a habituação do corpo e as implicações para estudos futuros e regulamentações.</p>
+        <p><strong>Instruções para Daby:</strong></p>
+        <ol>
+            <li>Ouça a frase em inglês clicando no ícone de áudio.</li>
+            <li>Leia a tradução e a explicação gramatical.</li>
+            <li>Tente preencher o espaço em branco com a palavra correta, usando o que você aprendeu.</li>
+            <li>Clique em "Verificar Resposta" para ver se acertou!</li>
+        </ol>
+
+        <!-- Frase 1 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 1:</h3>
+            <p><strong>Inglês:</strong> Regarding the influence of environmental conditions on learning processes. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Regarding%20the%20influence%20of%20environmental%20conditions%20on%20learning%20processes.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Em relação à influência das condições ambientais nos processos de aprendizagem.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Regarding"</strong> significa "Em relação a" ou "No que diz respeito a". É uma forma formal de introduzir um tópico.</li>
+                    <li><strong>"the influence of environmental conditions"</strong> significa "a influência das condições ambientais".</li>
+                    <li><strong>"on learning processes"</strong> significa "nos processos de aprendizagem". "Learning processes" (processos de aprendizagem) é um termo chave.</li>
+                    <li><strong>Propósito:</strong> Uma forma formal e acadêmica de iniciar uma discussão sobre um tema específico.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Regarding the influence of environmental conditions on learning ____."</p>
+                <input type="text" id="q1_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q1_tab5_input', 'processes', 'q1_tab5_feedback')">
+                <button onclick="checkAnswer('q1_tab5_input', 'processes', 'q1_tab5_feedback')">Verificar Resposta</button>
+                <div id="q1_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 2 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 2:</h3>
+            <p><strong>Inglês:</strong> Research has been conducted on indoor environmental quality. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Research%20has%20been%20conducted%20on%20indoor%20environmental%20quality.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Pesquisas têm sido conduzidas sobre qualidade ambiental interna.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Research has been conducted"</strong> significa "Pesquisas têm sido conduzidas". É uma estrutura de presente perfeito na voz passiva, indicando que a pesquisa é um processo contínuo.</li>
+                    <li><strong>"on indoor environmental quality"</strong> (sobre qualidade ambiental interna) você já conhece.</li>
+                    <li><strong>Propósito:</strong> Afirma a existência de um corpo de pesquisa sobre um tópico específico.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Research has been conducted on indoor environmental ____."</p>
+                <input type="text" id="q2_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q2_tab5_input', 'quality', 'q2_tab5_feedback')">
+                <button onclick="checkAnswer('q2_tab5_input', 'quality', 'q2_tab5_feedback')">Verificar Resposta</button>
+                <div id="q2_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 3 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 3:</h3>
+            <p><strong>Inglês:</strong> This focuses on the impact on cognitive performance. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20focuses%20on%20the%20impact%20on%20cognitive%20performance.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso foca no impacto no desempenho cognitivo.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This focuses on"</strong> (isso foca em) você já conhece.</li>
+                    <li><strong>"the impact on cognitive performance"</strong> significa "o impacto no desempenho cognitivo". "Cognitive performance" (desempenho cognitivo) é um termo chave.</li>
+                    <li><strong>Propósito:</strong> Especifica o aspecto do impacto que está sendo investigado.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This focuses on the impact on cognitive ____."</p>
+                <input type="text" id="q3_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q3_tab5_input', 'performance', 'q3_tab5_feedback')">
+                <button onclick="checkAnswer('q3_tab5_input', 'performance', 'q3_tab5_feedback')">Verificar Resposta</button>
+                <div id="q3_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 4 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 4:</h3>
+            <p><strong>Inglês:</strong> The concept of body habituation to critical conditions is relevant. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20concept%20of%20body%20habituation%20to%20critical%20conditions%20is%20relevant.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O conceito de habituação do corpo a condições críticas é relevante.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The concept of body habituation"</strong> significa "O conceito de habituação do corpo". "Habituation" (habituação) é um termo técnico.</li>
+                    <li><strong>"to critical conditions"</strong> significa "a condições críticas".</li>
+                    <li><strong>"is relevant"</strong> significa "é relevante".</li>
+                    <li><strong>Propósito:</strong> Introduz um conceito importante que explica como os organismos se adaptam a ambientes desafiadores.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The concept of body habituation to critical conditions is ____."</p>
+                <input type="text" id="q4_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q4_tab5_input', 'relevant', 'q4_tab5_feedback')">
+                <button onclick="checkAnswer('q4_tab5_input', 'relevant', 'q4_tab5_feedback')">Verificar Resposta</button>
+                <div id="q4_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 5 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 5:</h3>
+            <p><strong>Inglês:</strong> This suggests that specific studies should be conducted. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20suggests%20that%20specific%20studies%20should%20be%20conducted.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso sugere que estudos específicos devem ser conduzidos.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"This suggests that"</strong> (isso sugere que) você já conhece.</li>
+                    <li><strong>"specific studies"</strong> significa "estudos específicos".</li>
+                    <li><strong>"should be conducted"</strong> significa "devem ser conduzidos". "Should" (devem) expressa recomendação, e "be conducted" (ser conduzidos) é a voz passiva.</li>
+                    <li><strong>Propósito:</strong> Uma frase comum para recomendar a necessidade de novas pesquisas.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This suggests that specific studies should be ____."</p>
+                <input type="text" id="q5_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q5_tab5_input', 'conducted', 'q5_tab5_feedback')">
+                <button onclick="checkAnswer('q5_tab5_input', 'conducted', 'q5_tab5_feedback')">Verificar Resposta</button>
+                <div id="q5_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 6 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 6:</h3>
+            <p><strong>Inglês:</strong> To verify the current situation. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=To%20verify%20the%20current%20situation.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Para verificar a situação atual.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"To verify"</strong> significa "Para verificar". O "to" antes do verbo indica propósito.</li>
+                    <li><strong>"the current situation"</strong> significa "a situação atual". "Current" (atual) é um adjetivo.</li>
+                    <li><strong>Propósito:</strong> Complementa a frase anterior, explicando o objetivo dos estudos recomendados.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "To verify the current ____."</p>
+                <input type="text" id="q6_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q6_tab5_input', 'situation', 'q6_tab5_feedback')">
+                <button onclick="checkAnswer('q6_tab5_input', 'situation', 'q6_tab5_feedback')">Verificar Resposta</button>
+                <div id="q6_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 7 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 7:</h3>
+            <p><strong>Inglês:</strong> Or adapt the current regulations. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Or%20adapt%20the%20current%20regulations.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Ou adaptar as regulamentações atuais.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Or adapt"</strong> significa "Ou adaptar". "Adapt" (adaptar) é o verbo.</li>
+                    <li><strong>"the current regulations"</strong> significa "as regulamentações atuais". "Regulations" (regulamentações) é um substantivo importante em contextos de política e normas.</li>
+                    <li><strong>Propósito:</strong> Apresenta uma segunda implicação ou recomendação da pesquisa, focando na aplicação prática dos achados.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Or adapt the current ____."</p>
+                <input type="text" id="q7_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q7_tab5_input', 'regulations', 'q7_tab5_feedback')">
+                <button onclick="checkAnswer('q7_tab5_input', 'regulations', 'q7_tab5_feedback')">Verificar Resposta</button>
+                <div id="q7_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 8 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 8:</h3>
+            <p><strong>Inglês:</strong> IEQ is a key area of research. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=IEQ%20is%20a%20key%20area%20of%20research.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> IEQ é uma área chave de pesquisa.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"IEQ"</strong> é a sigla para "Indoor Environmental Quality" (Qualidade Ambiental Interna).</li>
+                    <li><strong>"is a key area of research"</strong> significa "é uma área chave de pesquisa". "Key area" (área chave) enfatiza a importância.</li>
+                    <li><strong>Propósito:</strong> Uma afirmação concisa sobre a relevância da IEQ.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "IEQ is a key area of ____."</p>
+                <input type="text" id="q8_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q8_tab5_input', 'research', 'q8_tab5_feedback')">
+                <button onclick="checkAnswer('q8_tab5_input', 'research', 'q8_tab5_feedback')">Verificar Resposta</button>
+                <div id="q8_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 9 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 9:</h3>
+            <p><strong>Inglês:</strong> It explores the relationship between environment and human well-being. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20explores%20the%20relationship%20between%20environment%20and%20human%20well-being.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Ela explora a relação entre ambiente e bem-estar humano.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It explores"</strong> (ela explora) você já conhece. "It" refere-se à pesquisa em IEQ.</li>
+                    <li><strong>"the relationship between"</strong> significa "a relação entre".</li>
+                    <li><strong>"environment and human well-being"</strong> significa "ambiente e bem-estar humano".</li>
+                    <li><strong>Propósito:</strong> Descreve o foco principal da pesquisa em IEQ.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It explores the relationship between environment and human ____."</p>
+                <input type="text" id="q9_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q9_tab5_input', 'well-being', 'q9_tab5_feedback')">
+                <button onclick="checkAnswer('q9_tab5_input', 'well-being', 'q9_tab5_feedback')">Verificar Resposta</button>
+                <div id="q9_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 10 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 10:</h3>
+            <p><strong>Inglês:</strong> It also considers cognitive functions such as attention and memory. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=It%20also%20considers%20cognitive%20functions%20such%20as%20attention%20and%20memory.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Também considera funções cognitivas como atenção e memória.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"It also considers"</strong> significa "Também considera". "Also" (também) é um advérbio.</li>
+                    <li><strong>"cognitive functions"</strong> significa "funções cognitivas".</li>
+                    <li><strong>"such as attention and memory"</strong> significa "como atenção e memória". "Such as" (como, tais como) é usado para dar exemplos.</li>
+                    <li><strong>Propósito:</strong> Expande o escopo da pesquisa, incluindo exemplos específicos de funções cognitivas relevantes para a Daby.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "It also considers cognitive functions such as attention and ____."</p>
+                <input type="text" id="q10_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q10_tab5_input', 'memory', 'q10_tab5_feedback')">
+                <button onclick="checkAnswer('q10_tab5_input', 'memory', 'q10_tab5_feedback')">Verificar Resposta</button>
+                <div id="q10_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 11 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 11:</h3>
+            <p><strong>Inglês:</strong> The impact on academic performance is significant. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20impact%20on%20academic%20performance%20is%20significant.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O impacto no desempenho acadêmico é significativo.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"The impact on academic performance"</strong> significa "O impacto no desempenho acadêmico". "Academic performance" (desempenho acadêmico) é um termo chave.</li>
+                    <li><strong>"is significant"</strong> significa "é significativo".</li>
+                    <li><strong>Propósito:</strong> Afirma a importância do impacto em um resultado direto do aprendizado.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The impact on academic performance is ____."</p>
+                <input type="text" id="q11_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q11_tab5_input', 'significant', 'q11_tab5_feedback')">
+                <button onclick="checkAnswer('q11_tab5_input', 'significant', 'q11_tab5_feedback')">Verificar Resposta</button>
+                <div id="q11_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 12 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 12:</h3>
+            <p><strong>Inglês:</strong> Studies show a relationship between thermal comfort and learning outcomes. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Studies%20show%20a%20relationship%20between%20thermal%20comfort%20and%20learning%20outcomes.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Estudos mostram uma relação entre conforto térmico e resultados de aprendizagem.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li><strong>"Studies show"</strong> significa "Estudos mostram".</li>
+                    <li><strong>"a relationship between"</strong> significa "uma relação entre".</li>
+                    <li><strong>"thermal comfort and learning outcomes"</strong> significa "conforto térmico e resultados de aprendizagem".</li>
+                    <li><strong>Propósito:</strong> Apresenta um achado comum na literatura, ligando diretamente os dois principais conceitos da Daby.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Studies show a relationship between thermal comfort and learning ____."</p>
+                <input type="text" id="q12_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q12_tab5_input', 'outcomes', 'q12_tab5_feedback')">
+                <button onclick="checkAnswer('q12_tab5_input', 'outcomes', 'q12_tab5_feedback')">Verificar Resposta</button>
+                <div id="q12_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 13 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 13:</h3>
+            <p><strong>Inglês:</strong> The concept of body habituation to critical conditions is relevant. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=The%20concept%20of%20body%20habituation%20to%20critical%20conditions%20is%20relevant.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> O conceito de habituação do corpo a condições críticas é relevante.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li>Esta frase é uma repetição intencional da Frase 4 desta aba para reforçar a estrutura e o vocabulário.</li>
+                    <li><strong>"The concept of body habituation"</strong> significa "O conceito de habituação do corpo".</li>
+                    <li><strong>"to critical conditions"</strong> significa "a condições críticas".</li>
+                    <li><strong>"is relevant"</strong> significa "é relevante".</li>
+                    <li><strong>Propósito:</strong> Reafirma a importância de um conceito complexo na área.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "The concept of body habituation to critical conditions is ____."</p>
+                <input type="text" id="q13_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q13_tab5_input', 'relevant', 'q13_tab5_feedback')">
+                <button onclick="checkAnswer('q13_tab5_input', 'relevant', 'q13_tab5_feedback')">Verificar Resposta</button>
+                <div id="q13_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 14 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 14:</h3>
+            <p><strong>Inglês:</strong> This suggests that specific studies should be conducted to verify the current situation. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=This%20suggests%20that%20specific%20studies%20should%20be%20conducted%20to%20verify%20the%20current%20situation.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Isso sugere que estudos específicos devem ser conduzidos para verificar a situação atual.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li>Você já conhece "This suggests that specific studies should be conducted".</li>
+                    <li><strong>"to verify the current situation"</strong> significa "para verificar a situação atual".</li>
+                    <li><strong>Propósito:</strong> Uma frase completa que propõe a necessidade de novas pesquisas focadas na avaliação do estado atual de um problema.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "This suggests that specific studies should be conducted to verify the current ____."</p>
+                <input type="text" id="q14_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q14_tab5_input', 'situation', 'q14_tab5_feedback')">
+                <button onclick="checkAnswer('q14_tab5_input', 'situation', 'q14_tab5_feedback')">Verificar Resposta</button>
+                <div id="q14_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <!-- Frase 15 (Aba 5) -->
+        <div class="phrase-block">
+            <h3>Frase 15:</h3>
+            <p><strong>Inglês:</strong> Or adapt the current regulations. <button class="audio-button" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Or%20adapt%20the%20current%20regulations.&tl=en&client=tw-ob')">🔊</button></p>
+            <p class="portuguese"><strong>Português:</strong> Ou adaptar as regulamentações atuais.</p>
+            <div class="explanation">
+                <p><strong>Explicação Gramatical e Contexto:</strong></p>
+                <ul>
+                    <li>Esta frase é uma repetição intencional da Frase 7 desta aba para reforçar a estrutura e o vocabulário.</li>
+                    <li><strong>"Or adapt"</strong> significa "Ou adaptar". "Adapt" (adaptar) é o verbo.</li>
+                    <li><strong>"the current regulations"</strong> significa "as regulamentações atuais". "Regulations" (regulamentações) é um substantivo importante em contextos de política e normas.</li>
+                    <li><strong>Propósito:</strong> Apresenta uma segunda implicação ou recomendação da pesquisa, focando na aplicação prática dos achados.</li>
+                </ul>
+            </div>
+            <div class="practice-section">
+                <p><strong>Para praticar:</strong> Complete a frase: "Or adapt the current ____."</p>
+                <input type="text" id="q15_tab5_input" onkeyup="checkAnswerOnEnter(event, 'q15_tab5_input', 'regulations', 'q15_tab5_feedback')">
+                <button onclick="checkAnswer('q15_tab5_input', 'regulations', 'q15_tab5_feedback')">Verificar Resposta</button>
+                <div id="q15_tab5_feedback" class="feedback"></div>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Considerações para a Daby:</strong></p>
+            <p>Excelente, Daby! Nesta quinta aba, você explorou frases que abordam a complexa relação entre o ambiente e o desempenho cognitivo, a importância da IEQ, a questão da habituação e as implicações para estudos futuros e regulamentações. Essas frases são essenciais para aprofundar sua revisão bibliográfica e para formular suas próprias discussões e recomendações. Continue praticando para dominar esses conceitos e estruturas!</p>
+        </div>
+    </div>
+
+    <!-- NOVA ABA 6: Termos-Chave -->
+    <div id="tab6" class="tab-content">
+        <h2>Aba 6: Termos-Chave Essenciais</h2>
+        <p>Daby, nesta aba, você encontrará 25 termos-chave que apareceram nas abas anteriores. Entender e memorizar esses termos é fundamental para a sua leitura e escrita de artigos científicos. Passe o mouse sobre cada termo para vê-lo em português e clique para ouvir a pronúncia!</p>
+
+        <div class="key-terms-grid">
+            <!-- Termo 1 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Study&tl=en&client=tw-ob')">
+                <strong>Study</strong>
+                <span>Estudo</span>
+            </div>
+            <!-- Termo 2 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Research&tl=en&client=tw-ob')">
+                <strong>Research</strong>
+                <span>Pesquisa</span>
+            </div>
+            <!-- Termo 3 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Investigates&tl=en&client=tw-ob')">
+                <strong>Investigates</strong>
+                <span>Investiga</span>
+            </div>
+            <!-- Termo 4 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Focuses%20on&tl=en&client=tw-ob')">
+                <strong>Focuses on</strong>
+                <span>Foca em</span>
+            </div>
+            <!-- Termo 5 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Examines&tl=en&client=tw-ob')">
+                <strong>Examines</strong>
+                <span>Examina</span>
+            </div>
+            <!-- Termo 6 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Aim&tl=en&client=tw-ob')">
+                <strong>Aim</strong>
+                <span>Objetivo</span>
+            </div>
+            <!-- Termo 7 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Thermal%20comfort&tl=en&client=tw-ob')">
+                <strong>Thermal comfort</strong>
+                <span>Conforto térmico</span>
+            </div>
+            <!-- Termo 8 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Student%20learning&tl=en&client=tw-ob')">
+                <strong>Student learning</strong>
+                <span>Aprendizagem do estudante</span>
+            </div>
+            <!-- Termo 9 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Influence&tl=en&client=tw-ob')">
+                <strong>Influence</strong>
+                <span>Influência</span>
+            </div>
+            <!-- Termo 10 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Impact&tl=en&client=tw-ob')">
+                <strong>Impact</strong>
+                <span>Impacto</span>
+            </div>
+            <!-- Termo 11 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Cognitive%20performance&tl=en&client=tw-ob')">
+                <strong>Cognitive performance</strong>
+                <span>Desempenho cognitivo</span>
+            </div>
+            <!-- Termo 12 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Environmental%20conditions&tl=en&client=tw-ob')">
+                <strong>Environmental conditions</strong>
+                <span>Condições ambientais</span>
+            </div>
+            <!-- Termo 13 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=School%20buildings&tl=en&client=tw-ob')">
+                <strong>School buildings</strong>
+                <span>Edifícios escolares</span>
+            </div>
+            <!-- Termo 14 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Indoor%20environmental%20quality&tl=en&client=tw-ob')">
+                <strong>Indoor environmental quality</strong>
+                <span>Qualidade ambiental interna (IEQ)</span>
+            </div>
+            <!-- Termo 15 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Air%20quality&tl=en&client=tw-ob')">
+                <strong>Air quality</strong>
+                <span>Qualidade do ar</span>
+            </div>
+            <!-- Termo 16 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Visual%20quality&tl=en&client=tw-ob')">
+                <strong>Visual quality</strong>
+                <span>Qualidade visual</span>
+            </div>
+            <!-- Termo 17 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Acoustic%20quality&tl=en&client=tw-ob')">
+                <strong>Acoustic quality</strong>
+                <span>Qualidade acústica</span>
+            </div>
+            <!-- Termo 18 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Academic%20activities&tl=en&client=tw-ob')">
+                <strong>Academic activities</strong>
+                <span>Atividades acadêmicas</span>
+            </div>
+            <!-- Termo 19 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Seasonal%20change&tl=en&client=tw-ob')">
+                <strong>Seasonal change</strong>
+                <span>Mudança sazonal</span>
+            </div>
+            <!-- Termo 20 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Body%20habituation&tl=en&client=tw-ob')">
+                <strong>Body habituation</strong>
+                <span>Habituação do corpo</span>
+            </div>
+            <!-- Termo 21 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Regulations&tl=en&client=tw-ob')">
+                <strong>Regulations</strong>
+                <span>Regulamentações</span>
+            </div>
+            <!-- Termo 22 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Learning%20outcomes&tl=en&client=tw-ob')">
+                <strong>Learning outcomes</strong>
+                <span>Resultados de aprendizagem</span>
+            </div>
+            <!-- Termo 23 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Data&tl=en&client=tw-ob')">
+                <strong>Data</strong>
+                <span>Dados</span>
+            </div>
+            <!-- Termo 24 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Variables&tl=en&client=tw-ob')">
+                <strong>Variables</strong>
+                <span>Variáveis</span>
+            </div>
+            <!-- Termo 25 -->
+            <div class="term-card" onclick="playAudio('https://translate.google.com/translate_tts?ie=UTF-8&q=Literature&tl=en&client=tw-ob')">
+                <strong>Literature</strong>
+                <span>Literatura</span>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Considerações para a Daby:</strong></p>
+            <p>Parabéns, Daby! Esta aba é um recurso valioso para solidificar seu vocabulário. Revise esses termos frequentemente, pois eles são a espinha dorsal dos artigos na sua área. Quanto mais familiarizada você estiver com eles, mais fácil será a leitura e a compreensão!</p>
+        </div>
+    </div>
+
+    <!-- NOVA ABA 7: Exercícios de Tradução -->
+    <div id="tab7" class="tab-content">
+        <h2>Aba 7: Exercícios de Tradução (Português para Inglês)</h2>
+        <p>Daby, agora é a sua vez de praticar a tradução! Traduza as frases curtas de português para inglês. Lembre-se de usar o vocabulário e as estruturas que você aprendeu nas abas anteriores.</p>
+        <p><strong>Instruções para Daby:</strong></p>
+        <ol>
+            <li>Leia a frase em português.</li>
+            <li>Digite sua tradução em inglês no campo de texto.</li>
+            <li>Clique em "Verificar Resposta" para ver a tradução correta e o feedback.</li>
+        </ol>
+
+        <!-- Exercício de Tradução 1 -->
+        <div class="translation-exercise">
+            <h3>Exercício 1:</h3>
+            <p><strong>Português:</strong> Este estudo investiga o conforto térmico.</p>
+            <input type="text" id="trans_q1_input" onkeyup="checkTranslationOnEnter(event, 'trans_q1_input', 'This study investigates thermal comfort.', 'trans_q1_feedback')">
+            <button onclick="checkTranslation('trans_q1_input', 'This study investigates thermal comfort.', 'trans_q1_feedback')">Verificar Resposta</button>
+            <div id="trans_q1_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 2 -->
+        <div class="translation-exercise">
+            <h3>Exercício 2:</h3>
+            <p><strong>Português:</strong> A pesquisa foca na aprendizagem do estudante.</p>
+            <input type="text" id="trans_q2_input" onkeyup="checkTranslationOnEnter(event, 'trans_q2_input', 'The research focuses on student learning.', 'trans_q2_feedback')">
+            <button onclick="checkTranslation('trans_q2_input', 'The research focuses on student learning.', 'trans_q2_feedback')">Verificar Resposta</button>
+            <div id="trans_q2_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 3 -->
+        <div class="translation-exercise">
+            <h3>Exercício 3:</h3>
+            <p><strong>Português:</strong> Este artigo examina condições ambientais.</p>
+            <input type="text" id="trans_q3_input" onkeyup="checkTranslationOnEnter(event, 'trans_q3_input', 'This paper examines environmental conditions.', 'trans_q3_feedback')">
+            <button onclick="checkTranslation('trans_q3_input', 'This paper examines environmental conditions.', 'trans_q3_feedback')">Verificar Resposta</button>
+            <div id="trans_q3_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 4 -->
+        <div class="translation-exercise">
+            <h3>Exercício 4:</h3>
+            <p><strong>Português:</strong> O objetivo é entender o impacto.</p>
+            <input type="text" id="trans_q4_input" onkeyup="checkTranslationOnEnter(event, 'trans_q4_input', 'The aim is to understand the impact.', 'trans_q4_feedback')">
+            <button onclick="checkTranslation('trans_q4_input', 'The aim is to understand the impact.', 'trans_q4_feedback')">Verificar Resposta</button>
+            <div id="trans_q4_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 5 -->
+        <div class="translation-exercise">
+            <h3>Exercício 5:</h3>
+            <p><strong>Português:</strong> Este trabalho explora a qualidade do ar.</p>
+            <input type="text" id="trans_q5_input" onkeyup="checkTranslationOnEnter(event, 'trans_q5_input', 'This work explores air quality.', 'trans_q5_feedback')">
+            <button onclick="checkTranslation('trans_q5_input', 'This work explores air quality.', 'trans_q5_feedback')">Verificar Resposta</button>
+            <div id="trans_q5_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 6 -->
+        <div class="translation-exercise">
+            <h3>Exercício 6:</h3>
+            <p><strong>Português:</strong> Nós apresentamos dados sobre cognição.</p>
+            <input type="text" id="trans_q6_input" onkeyup="checkTranslationOnEnter(event, 'trans_q6_input', 'We present data on cognition.', 'trans_q6_feedback')">
+            <button onclick="checkTranslation('trans_q6_input', 'We present data on cognition.', 'trans_q6_feedback')">Verificar Resposta</button>
+            <div id="trans_q6_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 7 -->
+        <div class="translation-exercise">
+            <h3>Exercício 7:</h3>
+            <p><strong>Português:</strong> Os achados sugerem novas regulamentações.</p>
+            <input type="text" id="trans_q7_input" onkeyup="checkTranslationOnEnter(event, 'trans_q7_input', 'The findings suggest new regulations.', 'trans_q7_feedback')">
+            <button onclick="checkTranslation('trans_q7_input', 'The findings suggest new regulations.', 'trans_q7_feedback')">Verificar Resposta</button>
+            <div id="trans_q7_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 8 -->
+        <div class="translation-exercise">
+            <h3>Exercício 8:</h3>
+            <p><strong>Português:</strong> Isso indica uma necessidade de pesquisa.</p>
+            <input type="text" id="trans_q8_input" onkeyup="checkTranslationOnEnter(event, 'trans_q8_input', 'This indicates a need for research.', 'trans_q8_feedback')">
+            <button onclick="checkTranslation('trans_q8_input', 'This indicates a need for research.', 'trans_q8_feedback')">Verificar Resposta</button>
+            <div id="trans_q8_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 9 -->
+        <div class="translation-exercise">
+            <h3>Exercício 9:</h3>
+            <p><strong>Português:</strong> Os resultados demonstram a influência.</p>
+            <input type="text" id="trans_q9_input" onkeyup="checkTranslationOnEnter(event, 'trans_q9_input', 'The results demonstrate the influence.', 'trans_q9_feedback')">
+            <button onclick="checkTranslation('trans_q9_input', 'The results demonstrate the influence.', 'trans_q9_feedback')">Verificar Resposta</button>
+            <div id="trans_q9_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 10 -->
+        <div class="translation-exercise">
+            <h3>Exercício 10:</h3>
+            <p><strong>Português:</strong> É importante considerar o bem-estar.</p>
+            <input type="text" id="trans_q10_input" onkeyup="checkTranslationOnEnter(event, 'trans_q10_input', 'It is important to consider well-being.', 'trans_q10_feedback')">
+            <button onclick="checkTranslation('trans_q10_input', 'It is important to consider well-being.', 'trans_q10_feedback')">Verificar Resposta</button>
+            <div id="trans_q10_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 11 -->
+        <div class="translation-exercise">
+            <h3>Exercício 11:</h3>
+            <p><strong>Português:</strong> Esta pesquisa destaca a literatura.</p>
+            <input type="text" id="trans_q11_input" onkeyup="checkTranslationOnEnter(event, 'trans_q11_input', 'This research highlights the literature.', 'trans_q11_feedback')">
+            <button onclick="checkTranslation('trans_q11_input', 'This research highlights the literature.', 'trans_q11_feedback')">Verificar Resposta</button>
+            <div id="trans_q11_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 12 -->
+        <div class="translation-exercise">
+            <h3>Exercício 12:</h3>
+            <p><strong>Português:</strong> O estudo contribui para a ciência.</p>
+            <input type="text" id="trans_q12_input" onkeyup="checkTranslationOnEnter(event, 'trans_q12_input', 'The study contributes to science.', 'trans_q12_feedback')">
+            <button onclick="checkTranslation('trans_q12_input', 'The study contributes to science.', 'trans_q12_feedback')">Verificar Resposta</button>
+            <div id="trans_q12_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 13 -->
+        <div class="translation-exercise">
+            <h3>Exercício 13:</h3>
+            <p><strong>Português:</strong> Nós observamos uma correlação forte.</p>
+            <input type="text" id="trans_q13_input" onkeyup="checkTranslationOnEnter(event, 'trans_q13_input', 'We observed a strong correlation.', 'trans_q13_feedback')">
+            <button onclick="checkTranslation('trans_q13_input', 'We observed a strong correlation.', 'trans_q13_feedback')">Verificar Resposta</button>
+            <div id="trans_q13_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 14 -->
+        <div class="translation-exercise">
+            <h3>Exercício 14:</h3>
+            <p><strong>Português:</strong> A metodologia empregada foi eficaz.</p>
+            <input type="text" id="trans_q14_input" onkeyup="checkTranslationOnEnter(event, 'trans_q14_input', 'The methodology employed was effective.', 'trans_q14_feedback')">
+            <button onclick="checkTranslation('trans_q14_input', 'The methodology employed was effective.', 'trans_q14_feedback')">Verificar Resposta</button>
+            <div id="trans_q14_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 15 -->
+        <div class="translation-exercise">
+            <h3>Exercício 15:</h3>
+            <p><strong>Português:</strong> Pesquisas futuras devem abordar variáveis.</p>
+            <input type="text" id="trans_q15_input" onkeyup="checkTranslationOnEnter(event, 'trans_q15_input', 'Future research should address variables.', 'trans_q15_feedback')">
+            <button onclick="checkTranslation('trans_q15_input', 'Future research should address variables.', 'trans_q15_feedback')">Verificar Resposta</button>
+            <div id="trans_q15_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 16 -->
+        <div class="translation-exercise">
+            <h3>Exercício 16:</h3>
+            <p><strong>Português:</strong> Conforto térmico influencia o desempenho.</p>
+            <input type="text" id="trans_q16_input" onkeyup="checkTranslationOnEnter(event, 'trans_q16_input', 'Thermal comfort influences performance.', 'trans_q16_feedback')">
+            <button onclick="checkTranslation('trans_q16_input', 'Thermal comfort influences performance.', 'trans_q16_feedback')">Verificar Resposta</button>
+            <div id="trans_q16_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 17 -->
+        <div class="translation-exercise">
+            <h3>Exercício 17:</h3>
+            <p><strong>Português:</strong> Qualidade do ar afeta a atenção.</p>
+            <input type="text" id="trans_q17_input" onkeyup="checkTranslationOnEnter(event, 'trans_q17_input', 'Air quality affects attention.', 'trans_q17_feedback')">
+            <button onclick="checkTranslation('trans_q17_input', 'Air quality affects attention.', 'trans_q17_feedback')">Verificar Resposta</button>
+            <div id="trans_q17_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 18 -->
+        <div class="translation-exercise">
+            <h3>Exercício 18:</h3>
+            <p><strong>Português:</strong> Edifícios escolares são ambientes críticos.</p>
+            <input type="text" id="trans_q18_input" onkeyup="checkTranslationOnEnter(event, 'trans_q18_input', 'School buildings are critical environments.', 'trans_q18_feedback')">
+            <button onclick="checkTranslation('trans_q18_input', 'School buildings are critical environments.', 'trans_q18_feedback')">Verificar Resposta</button>
+            <div id="trans_q18_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 19 -->
+        <div class="translation-exercise">
+            <h3>Exercício 19:</h3>
+            <p><strong>Português:</strong> IEQ é uma área chave.</p>
+            <input type="text" id="trans_q19_input" onkeyup="checkTranslationOnEnter(event, 'trans_q19_input', 'IEQ is a key area.', 'trans_q19_feedback')">
+            <button onclick="checkTranslation('trans_q19_input', 'IEQ is a key area.', 'trans_q19_feedback')">Verificar Resposta</button>
+            <div id="trans_q19_feedback" class="translation-feedback"></div>
+        </div>
+
+        <!-- Exercício de Tradução 20 -->
+        <div class="translation-exercise">
+            <h3>Exercício 20:</h3>
+            <p><strong>Português:</strong> Adaptar as regulamentações atuais é vital.</p>
+            <input type="text" id="trans_q20_input" onkeyup="checkTranslationOnEnter(event, 'trans_q20_input', 'Adapting current regulations is vital.', 'trans_q20_feedback')">
+            <button onclick="checkTranslation('trans_q20_input', 'Adapting current regulations is vital.', 'trans_q20_feedback')">Verificar Resposta</button>
+            <div id="trans_q20_feedback" class="translation-feedback"></div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Considerações para a Daby:</strong></p>
+            <p>Excelente trabalho nos exercícios de tradução! A prática de traduzir frases curtas ajuda a fixar o vocabulário e as estruturas gramaticais de forma rápida e eficaz. Continue revisando e praticando para que essas frases se tornem naturais para você!</p>
+        </div>
+    </div>
+
+    <script>
+        function playAudio(url) {
+            new Audio(url).play();
+        }
+
+        function checkAnswer(inputId, correctAnswer, feedbackId) {
+            const inputElement = document.getElementById(inputId);
+            const feedbackElement = document.getElementById(feedbackId);
+            const userAnswer = inputElement.value.trim();
+
+            if (userAnswer.toLowerCase() === correctAnswer.toLowerCase()) {
+                feedbackElement.textContent = "Correto! Muito bem!";
+                feedbackElement.className = "feedback correct";
+            } else {
+                feedbackElement.textContent = `Ops, a resposta correta é "${correctAnswer}". Tente novamente!`;
+                feedbackElement.className = "feedback incorrect";
+            }
+        }
+
+        function checkAnswerOnEnter(event, inputId, correctAnswer, feedbackId) {
+            if (event.key === 'Enter') {
+                checkAnswer(inputId, correctAnswer, feedbackId);
+            }
+        }
+
+        // Função para verificar a tradução
+        function checkTranslation(inputId, correctAnswer, feedbackId) {
+            const inputElement = document.getElementById(inputId);
+            const feedbackElement = document.getElementById(feedbackId);
+            const userAnswer = inputElement.value.trim();
+
+            // Normaliza a resposta do usuário e a resposta correta para comparação
+            const normalizedUserAnswer = userAnswer.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ");
+            const normalizedCorrectAnswer = correctAnswer.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ");
+
+            if (normalizedUserAnswer === normalizedCorrectAnswer) {
+                feedbackElement.textContent = "Correto! Muito bem!";
+                feedbackElement.className = "translation-feedback correct";
+            } else {
+                feedbackElement.textContent = `Ops, a resposta correta é: "${correctAnswer}". Tente novamente!`;
+                feedbackElement.className = "translation-feedback incorrect";
+            }
+        }
+
+        // Função para verificar a tradução ao pressionar Enter
+        function checkTranslationOnEnter(event, inputId, correctAnswer, feedbackId) {
+            if (event.key === 'Enter') {
+                checkTranslation(inputId, correctAnswer, feedbackId);
+            }
+        }
+
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Abrir a primeira aba por padrão ao carregar a página
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelector('.tab-button').click();
+        });
+    </script>
+
+</body>
+</html>
